@@ -1,0 +1,39 @@
+{
+    "tests" :
+    [
+        {
+            "name"      : "test 0",
+            "in"        : "42",
+            "expected"  : 42
+        },
+        {
+            "name"      : "test 1",
+            "in"        : "-42",
+            "expected"  : -42
+        },
+        {
+            "in"        : "4193 with words",
+            "expected"  : 4193
+        },
+        {
+            "in"        : " 4193 with words",
+            "expected"  : 4193
+        },
+        {
+            "in"        : " words and 987 ",
+            "expected"  : 0
+        },
+        {
+            "in"        : "-91283472332",
+            "expected"  : -2147483648
+        },
+        {
+            "in"        : " -+1",
+            "expected"  : 0
+        },
+        {
+            "in"        : " +1",
+            "expected"  : 1
+        }
+    ]
+}
