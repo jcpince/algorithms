@@ -1,0 +1,7 @@
+--exclude=.git
+--recurse=yes
+--exclude=obj
+
+-f .tags
+
+--fields=+KSn
