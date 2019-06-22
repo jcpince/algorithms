@@ -1,6 +1,6 @@
 #ifndef __LISTNODE__
 #define __LISTNODE__
-__LISTNODE__
+
 struct ListNode {
     int val;
     ListNode *next;
