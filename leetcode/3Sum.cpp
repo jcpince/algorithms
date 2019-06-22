@@ -20,28 +20,16 @@
 #include <algorithm>
 #include <iostream>
 #include <iterator>
-#include <cassert>
 #include <vector>
 #include <set>
 
 #include <UnitTests.h>
+#include <TestsHelper.h>
 
 using namespace std;
 
 //#define DEBUG 1
 #undef DEBUG
-#ifdef DEBUG
-#define vectorat(v, idx) v[idx]
-#define debug_print printf
-#define dev_assert assert
-#else
-#define vectorat(v, idx) v.at(idx)
-#define debug_print(...)
-#define dev_assert(...)
-#endif
-
-string array2str(vector<int> &nums);
-string array2str(vector<vector<int>> &vnums);
 
 void inline encode(uint64_t &encoded, int first, int second, int third)
 {
@@ -80,38 +68,6 @@ private:
         return vresults;
     }
 
-    bool find_third(int value, vector<int>::iterator start, vector<int>::iterator end)
-    {
-        while (start < end)
-        {
-            if (*start == value)
-                return true;
-            start++;
-        }
-        return false;
-    }
-
-    /* binary search / dichotomy */
-    int find_third(vector<int> nums, int value, int start, int end)
-    {
-#ifdef DEBUG
-        string sin = array2str(nums);
-        debug_print("find_third(%s, %d, %d, %d)...\n", sin.c_str(), value, start, end);
-#endif
-        int middle = start + (end - start + 1) / 2;
-        while (middle < end)
-        {
-            debug_print("Value %d, sme(%d, %d, %d)\n", value, start, middle, end);
-            if (nums[middle] > value)
-                end = middle;
-            else
-                start = middle;
-            if (nums[middle] == value)
-                return middle;
-            middle = start + (end - start + 1) / 2;
-        }
-        return -1;
-    }
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         if (nums.size() < 3) return {};
@@ -141,7 +97,11 @@ public:
                 uint64_t encoded;
                 encode(encoded, first, second, third);
 
-                if (results.find(encoded) != results.end()) continue; /* already there... */
+                if (results.find(encoded) != results.end())
+                {
+                    //printf("Encoded(0x%lx) is already there\n", encoded);
+                    continue; /* already there... */
+                }
 
                 if (third < first)
                 {
@@ -166,44 +126,6 @@ public:
         return set2vector(results);
     }
 };
-
-bool check_result(vector<vector<int>> &result, vector<vector<int>> &expected)
-{
-    if (result.size() != expected.size()) return false;
-    for (vector<int> v : result)
-    {
-        bool found = false;
-        for (vector<int> e : expected)
-        {
-            size_t idx = 0;
-            for ( ; idx < e.size() ; idx++)
-            {
-                if (vectorat(e, idx) != vectorat(v, idx)) break;
-            }
-            if (idx == e.size()) { found = true; break; }
-        }
-        if (!found) return false;
-    }
-    return true;
-}
-
-string array2str(vector<int>& nums)
-{
-    string s = "[";
-    for (int i : nums)
-        s += to_string(i) + ", ";
-    if (s.length() > 2) s.erase(s.length()-2,2);
-    return s + "]";
-}
-
-string array2str(vector<vector<int>> &vnums)
-{
-    string s = "[";
-    for (vector<int> v : vnums)
-        s += array2str(v) + ", ";
-    if (s.length() > 2) s.erase(s.length()-2,2);
-    return s + "]";
-}
 
 int run_test_case(void *_s, TestCase *tc)
 {
