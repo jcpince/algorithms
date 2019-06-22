@@ -76,24 +76,37 @@ string array2str(vector<vector<T>> &varr)
 
 /* binary search / dichotomy */
 template <class T>
-int find_third(vector<T> nums, T value, int start, int end)
+int find_element(vector<T> array, T value, int start, int end)
 {
 #ifdef DEBUG
-    string sin = array2str(nums);
-    debug_print("find_third(%s, %d, %d, %d)...\n", sin.c_str(), value, start, end);
+    string sin = array2str(array);
+    debug_print("find_third(%s, %d, %d, %d) ", sin.c_str(), value, start, end);
 #endif
+
     T middle = start + (end - start + 1) / 2;
-    while (middle < end)
+    while ((middle <= end) && (middle >= start))
     {
-        debug_print("Value %d, sme(%d, %d, %d)\n", value, start, middle, end);
-        if (nums[middle] > value)
-            end = middle;
-        else
-            start = middle;
-        if (nums[middle] == value)
+        T m = vectorat(array, middle);
+        debug_print("v(%d), m(%d), sme(%d, %d, %d)\n", value, m, start, middle, end);
+        if (m == value) {
+            debug_print(" ====> returns %d\n", middle);
             return middle;
+        }
+        // if ((middle == start) && (value < m)) return -1;
+        // if ((middle == end) && (value > m)) return -1;
+        if (value < m)
+        {
+            if (end == middle) end = middle-1;
+            else end = middle;
+        }
+        else
+        {
+            if (start == middle) start = middle+1;
+            else start = middle;
+        }
         middle = start + (end - start + 1) / 2;
     }
+    debug_print(" ===> returns -1\n");
     return -1;
 }
 

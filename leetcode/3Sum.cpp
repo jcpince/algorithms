@@ -50,7 +50,7 @@ void inline decode(uint64_t encoded, int &first, int &second, int &third)
     debug_print("decode(0x%lx) => %d, %d, %d\n", encoded, first, second, third);
 }
 
-const bool continue_on_failure = false;
+const bool continue_on_failure = true;
 
 class Solution {
 private:
@@ -73,54 +73,54 @@ public:
         if (nums.size() < 3) return {};
 
         set<uint64_t> results;
-        vector<int>::iterator it1, it2, it_start, it_end;
+        uint64_t encoded;
         sort(nums.begin(), nums.end());
-        it_start = nums.begin();
-        it_end = nums.end();
-        int first0 = (*it_start)-1;
 
-        int start_idx = 0, end_idx = nums.size();
-        for (it1 = it_start ; it1 < it_end ; it1++, start_idx++)
+        //printf("Sorted array is %s\n", array2str(nums).c_str());
+
+        int smallest = nums.front(), biggest = nums.back();
+        int end_idx = nums.size() - 1;
+
+        int first0 = smallest - 1;
+
+        for (int idx1 = 0 ; idx1 < end_idx-1 ; idx1++)
         {
-            int first = *it1, second0 = -1;
-            if (it1 < (it_end-1)) second0 = *(it1+1) - 1;
+            int first = vectorat(nums, idx1), second0 = first0;
             if (first == first0) continue;
+            if (first > 0) break;
             first0 = first;
-            int idx2 = start_idx + 1;
-            for (it2 = it1+1 ; it2 < it_end ; it2++, idx2++)
+
+            int found0 = end_idx+1;
+            //first_found0 = end_idx + 1;
+            //printf("Second loop with idx1 %d\n", idx1);
+            for (int idx2 = idx1 + 1 ; idx2 < end_idx ; idx2++)
             {
-                int found;
-                int second = *it2;
+                int second = vectorat(nums, idx2);
                 if (second == second0) continue;
+                if ((first + second) > 0) break;
+                second0 = second;
+
                 int third = 0 - first - second;
-                debug_print("Check the triplet(%d, %d, %d)\n", first, second, third);
-                uint64_t encoded;
+                if (third < smallest || third > biggest) continue;
+
                 encode(encoded, first, second, third);
 
-                if (results.find(encoded) != results.end())
-                {
-                    //printf("Encoded(0x%lx) is already there\n", encoded);
-                    continue; /* already there... */
-                }
+                if (results.find(encoded) != results.end()) continue;
 
-                if (third < first)
-                {
-                    found = find_third(nums, third, 0, start_idx-1);
-                }
-                else if (third < second)
-                {
-                    found = find_third(nums, third, start_idx+1, idx2-1);
-                }
-                else found = find_third(nums, third, idx2+1, end_idx);
+                /*printf("Candidate (%d, %d, %d) - search %d between %d and %d\n",
+                    first, second, third, third, idx2+1, found0-1);*/
+                int found = find_element(nums, third, idx2+1, found0-1);
 
+                //printf("Here third is %d, idx1(%d), idx2(%d), found0(%d) => %d\n", third, idx1, idx2, found0, found);
                 if (found != -1)
                 {
-                    debug_print("Insert %d, %d, %d\n", first, second, third);
+                    //printf("Found is %d, Insert %d, %d, %d\n", found, first, second, third);
+                    // printf("Found is %d, Insert %d, %d, %d\n", found, first, second, third);
+                    assert(found < found0);
                     results.insert(encoded);
+                    found0 = found;
+                    //if (first_found0 == (end_idx+1)) first_found0 = found0;
                 }
-
-                /* Update second0 so we don't endup looking more than once for a+b+b*/
-                second0 = second;
             }
         }
         return set2vector(results);
