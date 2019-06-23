@@ -197,7 +197,23 @@ int find_element_or_below(vector<T> array, T value, int start, int end, int &bel
 }
 
 template <class T>
-int find_element(vector<T> array, T value, int start, int end)
+int findSorted(vector<T> array, T value, int start, int end)
+{
+    int middle;
+    if(start == end) return (array[start] == value ? start : -1);
+
+    while(start < end)
+    {
+        middle = (start + end) / 2;
+        if(array[middle] == value) return middle;
+        else if (array[middle] > value) end = middle - 1;
+        else start = middle + 1;
+    }
+    return -1;
+}
+
+template <class T>
+int findSorted2(vector<T> array, T value, int start, int end)
 {
 #ifdef DEBUG
     string sin = array2str(array);
