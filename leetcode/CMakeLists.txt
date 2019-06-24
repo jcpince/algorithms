@@ -6,3 +6,6 @@ target_link_libraries(3Sum unittests)
 
 add_executable(searchInsert searchInsert.cpp)
 target_link_libraries(searchInsert unittests)
+
+add_executable(countAndSay countAndSay.cpp)
+target_link_libraries(countAndSay unittests)
