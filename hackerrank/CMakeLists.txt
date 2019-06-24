@@ -1,0 +1,8 @@
+add_executable(countApplesAndOranges countApplesAndOranges.cpp)
+target_link_libraries(countApplesAndOranges unittests)
+
+add_executable(formingMagicSquare formingMagicSquare.cpp)
+target_link_libraries(formingMagicSquare unittests)
+
+add_executable(larrysArray larrysArray.cpp)
+target_link_libraries(larrysArray unittests)

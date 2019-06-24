@@ -20,3 +20,4 @@ include_directories(tools)
 
 add_subdirectory(tools)
 add_subdirectory(leetcode)
+add_subdirectory(hackerrank)

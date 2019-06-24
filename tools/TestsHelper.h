@@ -32,6 +32,8 @@ uint64_t iterations_count = 0;
 #define print_iterations_count()
 #endif
 
+#define UNUSED(x) (void)(x)
+
 template <class T>
 bool check_result(vector<T> &result, vector<T> &expected)
 {
