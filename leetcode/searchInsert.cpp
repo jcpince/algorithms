@@ -53,7 +53,7 @@ class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
 
-        int below_idx;
+        int below_idx = 0;
         int found_idx = find_element_or_below(nums, target, 0, nums.size()-1, below_idx);
 
         if (found_idx != -1) return found_idx;

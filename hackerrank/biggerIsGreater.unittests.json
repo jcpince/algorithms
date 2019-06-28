@@ -1,0 +1,17 @@
+{
+    "tests" :
+    [
+        {
+            "in"        : "dkhc",
+            "expected"  : "hcdk"
+        },
+        {
+            "in"        : "bb",
+            "expected"  : "no answer"
+        },
+        {
+            "in"        : "dcba",
+            "expected"  : "no answer"
+        }
+    ]
+}

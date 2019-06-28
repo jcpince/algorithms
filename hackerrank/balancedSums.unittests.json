@@ -1,0 +1,33 @@
+{
+    "tests" :
+    [
+        {
+            "in"        : [1,2,3],
+            "expected"  : "NO"
+        },
+        {
+            "in"        : [1],
+            "expected"  : "YES"
+        },
+        {
+            "in"        : [1,2,3,3],
+            "expected"  : "YES"
+        },
+        {
+            "in"        : [1,1,4,1,1],
+            "expected"  : "YES"
+        },
+        {
+            "in"        : [2,0,0,0],
+            "expected"  : "YES"
+        },
+        {
+            "in"        : [0,0,2,0],
+            "expected"  : "YES"
+        },
+        {
+            "in"        : [0,0,0,2],
+            "expected"  : "YES"
+        }
+    ]
+}

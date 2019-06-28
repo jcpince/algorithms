@@ -1,0 +1,37 @@
+{
+    "tests" :
+    [
+        {
+            "in"        : [3, 0],
+            "expected"  : "three o' clock"
+        },
+        {
+            "in"        : [11, 1],
+            "expected"  : "one minute past eleven"
+        },
+        {
+            "in"        : [11, 2],
+            "expected"  : "two minutes past eleven"
+        },
+        {
+            "in"        : [12, 55],
+            "expected"  : "five minutes to one"
+        },
+        {
+            "in"        : [11, 55],
+            "expected"  : "five minutes to twelve"
+        },
+        {
+            "in"        : [7, 15],
+            "expected"  : "quarter past seven"
+        },
+        {
+            "in"        : [7, 45],
+            "expected"  : "quarter to eight"
+        },
+        {
+            "in"        : [7, 59],
+            "expected"  : "one minute to eight"
+        }
+    ]
+}

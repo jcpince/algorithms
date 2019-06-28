@@ -10,11 +10,11 @@ using namespace std;
 #include <cstdio>
 #include <cassert>
 
-#define vectorat(v, idx) v[idx]
+#define vectorat(v, idx) v.at(idx)
 #define debug_print printf
 #define dev_assert assert
 #else
-#define vectorat(v, idx) v.at(idx)
+#define vectorat(v, idx) v[idx]
 #define debug_print(...)
 #define dev_assert(...)
 #endif
@@ -38,11 +38,10 @@ template <class T>
 bool check_result(vector<T> &result, vector<T> &expected)
 {
     if (result.size() != expected.size()) return false;
-    for (T v : result)
+    size_t idx = 0;
+    for (T v : expected)
     {
-        size_t idx = 0;
-        for ( ; idx < expected.size() ; idx++)
-            if (expected.at(idx) != v) return false;
+        if (result.at(idx++) != v) return false;
     }
     return true;
 }
