@@ -1,0 +1,41 @@
+{
+    "tests" :
+    [
+        {
+            "in"        : 1,
+            "expected"  : "I"
+        },
+        {
+            "in"        : 3,
+            "expected"  : "III"
+        },
+        {
+            "in"        : 4,
+            "expected"  : "IV"
+        },
+        {
+            "in"        : 5,
+            "expected"  : "V"
+        },
+        {
+            "in"        : 9,
+            "expected"  : "IX"
+        },
+        {
+            "in"        : 58,
+            "expected"  : "LVIII"
+        },
+        {
+            "in"        : 1994,
+            "expected"  : "MCMXCIV"
+        },
+        {
+            "in"        : 80,
+            "expected"  : "LXXX"
+        },
+        {
+            "in"        : 3999,
+            "expected"  : "MMMCMXCIX"
+        }
+    ]
+}

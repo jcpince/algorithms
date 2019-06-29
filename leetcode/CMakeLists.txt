@@ -9,3 +9,12 @@ target_link_libraries(searchInsert unittests)
 
 add_executable(countAndSay countAndSay.cpp)
 target_link_libraries(countAndSay unittests)
+
+add_executable(maxArea maxArea.cpp)
+target_link_libraries(maxArea unittests)
+
+add_executable(intToRoman intToRoman.cpp)
+target_link_libraries(intToRoman unittests)
+
+add_executable(3SumClosest 3SumClosest.cpp)
+target_link_libraries(3SumClosest unittests)
