@@ -1,0 +1,9 @@
+{
+    "tests" :
+    [
+        {
+            "in"        : "23",
+            "expected"  : ["ad", "bd", "cd", "ae", "be", "ce", "af", "bf", "cf"]
+        }
+    ]
+}

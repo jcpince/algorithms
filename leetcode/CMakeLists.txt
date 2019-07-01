@@ -18,3 +18,6 @@ target_link_libraries(intToRoman unittests)
 
 add_executable(3SumClosest 3SumClosest.cpp)
 target_link_libraries(3SumClosest unittests)
+
+add_executable(letterCombinations letterCombinations.cpp)
+target_link_libraries(letterCombinations unittests)
