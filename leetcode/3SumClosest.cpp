@@ -33,7 +33,7 @@ void testSubsets3(const vector<int> &x, const int &tsum, int &best_sum, int curr
 {
     /* stop conditions */
     int cur_delta = abs(tsum - curr_sum), best_delta = abs(tsum - best_sum);
-    printf("best_sum(%d), cur_delta(%d), best_delta(%d), curr_size(%d)\n", best_sum, cur_delta,
+    printf("best_sum(%d), cur_delta(%d), best_delta(%d), curr_size(%ld)\n", best_sum, cur_delta,
         best_delta, curr_size);
     if (curr_size == 3) {
         if (cur_delta < best_delta) {

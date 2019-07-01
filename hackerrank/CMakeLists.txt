@@ -27,3 +27,6 @@ target_link_libraries(twoArrays unittests)
 
 add_executable(jimOrders jimOrders.cpp)
 target_link_libraries(jimOrders unittests)
+
+add_executable(arraySplitting arraySplitting.cpp)
+target_link_libraries(arraySplitting unittests)
