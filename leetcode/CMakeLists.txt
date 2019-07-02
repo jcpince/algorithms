@@ -21,3 +21,6 @@ target_link_libraries(3SumClosest unittests)
 
 add_executable(letterCombinations letterCombinations.cpp)
 target_link_libraries(letterCombinations unittests)
+
+add_executable(fourSum fourSum.cpp)
+target_link_libraries(fourSum unittests)
