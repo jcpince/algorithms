@@ -1,0 +1,5 @@
+add_executable(quickSortTests quickSortTests.cpp)
+target_link_libraries(quickSortTests unittests)
+
+add_executable(mergeSortTests mergeSortTests.cpp)
+target_link_libraries(mergeSortTests unittests)

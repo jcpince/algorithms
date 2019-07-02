@@ -35,7 +35,7 @@ uint64_t iterations_count = 0;
 #define UNUSED(x) (void)(x)
 
 template <class T>
-bool check_result(vector<T> &result, vector<T> &expected)
+bool check_result(const vector<T> &result, const vector<T> &expected)
 {
     if (result.size() != expected.size()) return false;
     size_t idx = 0;
@@ -47,7 +47,7 @@ bool check_result(vector<T> &result, vector<T> &expected)
 }
 
 template <class T>
-bool check_result(vector<vector<T>> &result, vector<vector<T>> &expected)
+bool check_result(const vector<vector<T>> &result, const vector<vector<T>> &expected)
 {
     if (result.size() != expected.size()) return false;
     for (vector<T> v : result)
@@ -67,8 +67,17 @@ bool check_result(vector<vector<T>> &result, vector<vector<T>> &expected)
     return true;
 }
 
+string array2str(const vector<string> &arr)
+{
+    string s = "[";
+    for (string i : arr)
+        s += i + ", ";
+    if (s.length() > 2) s.erase(s.length()-2,2);
+    return s + "]";
+}
+
 template <class T>
-string array2str(vector<T> &arr)
+string array2str(const vector<T> &arr)
 {
     string s = "[";
     for (T i : arr)
@@ -78,7 +87,7 @@ string array2str(vector<T> &arr)
 }
 
 template <class T>
-string array2str(vector<vector<T>> &varr)
+string array2str(const vector<vector<T>> &varr)
 {
     string s = "[";
     for (vector<T> v : varr)

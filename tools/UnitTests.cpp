@@ -39,7 +39,7 @@ void UnitTests::openFile(const char *filename)
         if (tc_json[JSON_TEST_CASE_EXPECTED_FIELDNAME].size() == 0)
             throw invalid_argument((string)"No field " + JSON_TEST_CASE_EXPECTED_FIELDNAME +
                 " found in the test case[" + to_string(tc_index) + "] of " + filename);
-
+        tc_index++;
     }
 }
 
