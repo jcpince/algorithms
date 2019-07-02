@@ -30,3 +30,6 @@ target_link_libraries(jimOrders unittests)
 
 add_executable(arraySplitting arraySplitting.cpp)
 target_link_libraries(arraySplitting unittests)
+
+add_executable(mandragora mandragora.cpp)
+target_link_libraries(mandragora unittests)
