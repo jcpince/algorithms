@@ -223,7 +223,7 @@ int run_test_case(void *_s, TestCase *tc)
         return 0;
     }
 
-    debug_print("findRedundantConnection(%s) returned %s but expected %s\n", array2str(edges).c_str(),
+    printf("findRedundantConnection(%s) returned %s but expected %s\n", array2str(edges).c_str(),
         array2str(result).c_str(), array2str(expected).c_str());
     dev_assert(continue_on_failure);
     return 1;

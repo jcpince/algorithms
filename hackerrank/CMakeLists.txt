@@ -33,3 +33,6 @@ target_link_libraries(arraySplitting unittests)
 
 add_executable(mandragora mandragora.cpp)
 target_link_libraries(mandragora unittests)
+
+add_executable(graph_shortest_reach graph_shortest_reach.cpp)
+target_link_libraries(graph_shortest_reach unittests)
