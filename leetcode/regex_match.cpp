@@ -73,8 +73,9 @@ using namespace std;
 
 const bool continue_on_failure = false;
 
+/* -------------- INCOMPLETE -------------- */
+
 class Solution {
-    /* TODO */
     bool isMatch(const char *str, const char *regex)
     {
         if (!*regex && !*str) return true;

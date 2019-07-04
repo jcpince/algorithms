@@ -24,3 +24,12 @@ target_link_libraries(letterCombinations unittests)
 
 add_executable(fourSum fourSum.cpp)
 target_link_libraries(fourSum unittests)
+
+add_executable(findContentChildren findContentChildren.cpp)
+target_link_libraries(findContentChildren unittests)
+
+add_executable(reachableNodes reachableNodes.cpp)
+target_link_libraries(reachableNodes unittests)
+
+add_executable(findRedundantConnection findRedundantConnection.cpp)
+target_link_libraries(findRedundantConnection unittests)
