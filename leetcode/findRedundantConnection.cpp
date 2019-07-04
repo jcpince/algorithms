@@ -49,8 +49,9 @@ We apologize for any inconvenience caused.
 
 #include <bits/stdc++.h>
 
-#define DEBUG 1
-//#undef DEBUG
+//#define DEBUG 1
+#undef DEBUG
+#define PERFS_TESTS_COUNT 15000
 
 #include <UnitTests.h>
 #include <TestsHelper.h>
@@ -168,7 +169,46 @@ public:
         result[1] = max(orig, dest);
         return result;
     }
+
+    /* BUG: works only for directed graphs TC#11 fails (edge [2,8] direction is inverted!)
+     * But very interesting nootheless since simply detect which edge node has two parents and
+     * considers it as the cycle */
+    vector<int> par;
+    int find2(int a){
+        if(par[a]<0)return a;
+        return (par[a]=find2(par[a]));
+    }
+
+    bool _union(int a,int b){
+        if((a=find2(a))==(b=find2(b))){
+            //cout<<"Matched input"<<endl;
+            return true;
+        }
+
+        if(par[a]>par[b])swap(a,b);
+        par[a]+=par[b];
+        par[b]=a;
+        return false;
+    }
+
+    vector<int> findRedundantConnection_ref(vector<vector<int>>& edges) {
+
+        par=vector<int>(edges.size()+1,-1);
+        vector<int> ans;
+        for(auto& edge:edges){
+            if(_union(edge[0],edge[1]))ans=edge;
+        }
+        return ans;
+    }
 };
+
+void run_perf_tests(TestCase *tc) {
+
+    vector<vector<int>> edges = tc->test_case[JSON_TEST_CASE_IN_FIELDNAME];
+    Solution sol;
+    for (int idx = 0 ; idx < PERFS_TESTS_COUNT ; idx++)
+        sol.findRedundantConnection(edges);
+}
 
 int run_test_case(void *_s, TestCase *tc)
 {
@@ -178,7 +218,10 @@ int run_test_case(void *_s, TestCase *tc)
 
     Solution sol;
     vector<int> result = sol.findRedundantConnection(edges);
-    if (check_result(result, expected)) return 0;
+    if (check_result(result, expected)) {
+        run_perf_tests(tc);
+        return 0;
+    }
 
     debug_print("findRedundantConnection(%s) returned %s but expected %s\n", array2str(edges).c_str(),
         array2str(result).c_str(), array2str(expected).c_str());
