@@ -61,12 +61,12 @@ class Solution:
         flowers_available = [1,2,3,4]
         for n in node.tos:
             if n.flower != -1:
-                print("Node %d flower is %d" % (n.index + 1, n.flower))
+                #print("Node %d flower is %d" % (n.index + 1, n.flower))
                 flowers_available[n.flower-1] = -1
 
         for n in node.froms:
             if n.flower != -1:
-                print("Node %d flower is %d" % (n.index + 1, n.flower))
+                #print("Node %d flower is %d" % (n.index + 1, n.flower))
                 flowers_available[n.flower-1] = -1
 
         for flower in flowers_available:
@@ -113,3 +113,5 @@ s = Solution()
 #print(s.gardenNoAdj(3, [[1,2],[2,3],[3,1]]))
 #print(s.gardenNoAdj(4, [[1,2],[3,4]]))
 print(s.gardenNoAdjFast(4, [[1,2],[2,3],[3,4],[4,1],[1,3],[2,4]]))
+for _ in range(500000):
+    s.gardenNoAdjFast(4, [[1,2],[2,3],[3,4],[4,1],[1,3],[2,4]])
