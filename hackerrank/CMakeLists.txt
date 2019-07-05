@@ -36,3 +36,6 @@ target_link_libraries(mandragora unittests)
 
 add_executable(graph_shortest_reach graph_shortest_reach.cpp)
 target_link_libraries(graph_shortest_reach unittests)
+
+add_executable(candies candies.cpp)
+target_link_libraries(candies unittests)
