@@ -1,0 +1,91 @@
+{
+    "tests" :
+    [
+        {
+            "in"        :
+            {
+                "tasks" : ["a","b","c","d"],
+                "n" : 2
+            },
+            "expected"  : "a"
+        },
+        {
+            "in"        :
+            {
+                "tasks" : ["a","b","c","d","e"],
+                "n" : 3
+            },
+            "expected"  : "d"
+        },
+        {
+            "in"        :
+            {
+                "tasks" : ["alpha","beta","gamma","delta","epsilon"],
+                "n" : 1
+            },
+            "expected"  : "epsilon"
+        },
+        {
+            "in"        :
+            {
+                "tasks" : ["alpha","beta","gamma","delta","epsilon"],
+                "n" : 1
+            },
+            "expected"  : "epsilon"
+        },
+        {
+            "in"        :
+            {
+                "tasks" : ["a","b"],
+                "n" : 1000
+            },
+            "expected"  : "a"
+        },
+        {
+            "in"        :
+            {
+                "tasks" : ["a","b"],
+                "n" : 1000
+            },
+            "expected"  : "a"
+        },
+        {
+            "in"        :
+            {
+                "tasks" : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
+"u","v","w","x","y","z"],
+                "n" : 17
+            },
+            "expected"  : "n"
+        },
+        {
+            "in"        :
+            {
+                "tasks" : ["zlqamum","yjsrpybmq","tjllfea","fxjqzznvg","nvhekxr","am","skmazcey","piklp",
+"olcqvhg","dnpo","bhcfc","y","h","fj","bjeoaxglt","oafduixsz","kmtbaxu",
+"qgcxjbfx","my","mlhy","bt","bo","q"],
+                "n" : 9000000
+            },
+            "expected"  : "fxjqzznvg"
+        },
+        {
+            "in"        :
+            {
+                "tasks" : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
+"u","v","w","x","y","z"],
+                "n" : 1
+            },
+            "expected"  : "z"
+        },
+        {
+            "in"        :
+            {
+                "tasks" : ["zlqamum","yjsrpybmq","tjllfea","fxjqzznvg","nvhekxr","am","skmazcey","piklp",
+"olcqvhg","dnpo","bhcfc","y","h","fj","bjeoaxglt","oafduixsz","kmtbaxu",
+"qgcxjbfx","my","mlhy","bt","bo","q"],
+                "n" : 1
+            },
+            "expected"  : "q"
+        }
+    ]
+}
