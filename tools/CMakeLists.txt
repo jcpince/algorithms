@@ -1,1 +1,1 @@
-add_library(unittests UnitTests.cpp)
+add_library(unittests UnitTests.cpp TestsHelper.cpp TreeNode.cpp)

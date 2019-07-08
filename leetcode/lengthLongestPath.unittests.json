@@ -1,0 +1,29 @@
+{
+    "tests" :
+    [
+        {
+            "in"        : "dir10\n       file.txt",
+            "expected"  : 15
+        },
+        {
+            "in"        : "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext",
+            "expected"  : 20
+        },
+        {
+            "in"        : "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext",
+            "expected"  : 32
+        },
+        {
+            "in"        : "a.txt",
+            "expected"  : 5
+        },
+        {
+            "in"        : ".txt",
+            "expected"  : 4
+        },
+        {
+            "in"        : "a.",
+            "expected"  : 2
+        }
+    ]
+}

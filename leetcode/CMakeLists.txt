@@ -39,3 +39,24 @@ target_link_libraries(maxIncreaseKeepingSkyline unittests)
 
 add_executable(bstToGst bstToGst.cpp)
 target_link_libraries(bstToGst unittests)
+
+add_executable(widthOfBinaryTree widthOfBinaryTree.cpp)
+target_link_libraries(widthOfBinaryTree unittests)
+
+add_executable(pascalTriangle pascalTriangle.cpp)
+target_link_libraries(pascalTriangle unittests)
+
+add_executable(kClosest kClosest.cpp)
+target_link_libraries(kClosest unittests)
+
+add_executable(powerSet powerSet.cpp)
+target_link_libraries(powerSet unittests)
+
+add_executable(rotate90 rotate90.cpp)
+target_link_libraries(rotate90 unittests)
+
+add_executable(licenseKeyFormatting licenseKeyFormatting.cpp)
+target_link_libraries(licenseKeyFormatting unittests)
+
+add_executable(lengthLongestPath lengthLongestPath.cpp)
+target_link_libraries(lengthLongestPath unittests)

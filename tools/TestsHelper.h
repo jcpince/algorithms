@@ -67,14 +67,7 @@ bool check_result(const vector<vector<T>> &result, const vector<vector<T>> &expe
     return true;
 }
 
-string array2str(const vector<string> &arr)
-{
-    string s = "[";
-    for (string i : arr)
-        s += i + ", ";
-    if (s.length() > 2) s.erase(s.length()-2,2);
-    return s + "]";
-}
+string array2str(const vector<string> &arr);
 
 template <class T>
 string array2str(const vector<T> &arr)

@@ -29,18 +29,6 @@ void UnitTests::openFile(const char *filename)
     if (alltests[JSON_TESTS_SECTIONNAME].size() == 0)
         throw invalid_argument((string)"No section " + JSON_TESTS_SECTIONNAME + " found in " +
             filename);
-
-    int tc_index = 0;
-    for (json tc_json : alltests[JSON_TESTS_SECTIONNAME])
-    {
-        if (tc_json[JSON_TEST_CASE_IN_FIELDNAME].size() == 0)
-            throw invalid_argument((string)"No field " + JSON_TEST_CASE_IN_FIELDNAME +
-                " found in the test case[" + to_string(tc_index) + "] of " + filename);
-        if (tc_json[JSON_TEST_CASE_EXPECTED_FIELDNAME].size() == 0)
-            throw invalid_argument((string)"No field " + JSON_TEST_CASE_EXPECTED_FIELDNAME +
-                " found in the test case[" + to_string(tc_index) + "] of " + filename);
-        tc_index++;
-    }
 }
 
 TestCase *UnitTests::getTestCase(int index)
