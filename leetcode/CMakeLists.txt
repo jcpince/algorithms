@@ -33,3 +33,9 @@ target_link_libraries(reachableNodes unittests)
 
 add_executable(findRedundantConnection findRedundantConnection.cpp)
 target_link_libraries(findRedundantConnection unittests)
+
+add_executable(maxIncreaseKeepingSkyline maxIncreaseKeepingSkyline.cpp)
+target_link_libraries(maxIncreaseKeepingSkyline unittests)
+
+add_executable(bstToGst bstToGst.cpp)
+target_link_libraries(bstToGst unittests)
