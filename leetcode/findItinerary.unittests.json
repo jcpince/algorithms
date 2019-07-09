@@ -1,0 +1,17 @@
+{
+    "tests" :
+    [
+        {
+            "in"        : [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]],
+            "expected"  : ["JFK","ATL","JFK","SFO","ATL","SFO"]
+        },
+        {
+            "in"        : [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]],
+            "expected"  : ["JFK", "MUC", "LHR", "SFO", "SJC"]
+        },
+        {
+            "in"        : [["JFK","2"],["JFK","3"],["2","4"],["3","4"],["4","JFK"],["4","JFK"],["4","5"],["JFK","4"]],
+            "expected"  : ["JFK","2","4","JFK","3","4","JFK","4","5"]
+        }
+    ]
+}

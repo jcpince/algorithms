@@ -60,3 +60,12 @@ target_link_libraries(licenseKeyFormatting unittests)
 
 add_executable(lengthLongestPath lengthLongestPath.cpp)
 target_link_libraries(lengthLongestPath unittests)
+
+add_executable(QueueWithStacks QueueWithStacks.cpp)
+target_link_libraries(QueueWithStacks unittests)
+
+add_executable(findItinerary findItinerary.cpp)
+target_link_libraries(findItinerary unittests)
+
+add_executable(updateMatrix updateMatrix.cpp)
+target_link_libraries(updateMatrix unittests)
