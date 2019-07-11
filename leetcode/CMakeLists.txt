@@ -69,3 +69,6 @@ target_link_libraries(findItinerary unittests)
 
 add_executable(updateMatrix updateMatrix.cpp)
 target_link_libraries(updateMatrix unittests)
+
+add_executable(gameOfLife gameOfLife.cpp)
+target_link_libraries(gameOfLife unittests)
