@@ -72,3 +72,6 @@ target_link_libraries(updateMatrix unittests)
 
 add_executable(gameOfLife gameOfLife.cpp)
 target_link_libraries(gameOfLife unittests)
+
+add_executable(searchRotatedArrayII searchRotatedArrayII.cpp)
+target_link_libraries(searchRotatedArrayII unittests)

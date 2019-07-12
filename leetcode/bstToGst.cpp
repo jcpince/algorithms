@@ -43,7 +43,9 @@ Note:
 
 using namespace std;
 
+#ifdef DEBUG
 const bool continue_on_failure = false;
+#endif
 
 class Solution {
     void append_right_branch(vector<struct TreeNode *> &vnodes, TreeNode* root) {
@@ -83,7 +85,8 @@ int run_test_case(void *_s, TestCase *tc)
     vector<int> vtree = tc->test_case[JSON_TEST_CASE_IN_FIELDNAME];
     vector<int> expected = tc->test_case[JSON_TEST_CASE_EXPECTED_FIELDNAME];
 
-    struct TreeNode tree[vtree.size()] = {0};
+    struct TreeNode tree[vtree.size()];
+    memset(tree, 0, vtree.size()*sizeof(struct TreeNode));
     vector2tree(vtree, tree);
 
     Solution s;

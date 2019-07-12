@@ -55,13 +55,17 @@ Notes:
 
 using namespace std;
 
+#ifdef DEBUG
 const bool continue_on_failure = false;
+#endif
 
 class Solution {
 public:
     int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {
 
-        int hskyline[grid.size()] = {0}, vskyline[grid.size()] = {0};
+        int hskyline[grid.size()], vskyline[grid.size()];
+        bzero(hskyline, grid.size() * sizeof(int));
+        bzero(vskyline, grid.size() * sizeof(int));
         for (size_t i = 0 ; i < grid.size() ; i++) {
             for (size_t j = 0 ; j < grid[0].size() ; j++) {
                 hskyline[i] = max(hskyline[i], grid[i][j]);

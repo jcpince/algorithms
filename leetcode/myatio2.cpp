@@ -73,7 +73,7 @@ using namespace std;
 #define dev_assert(...)
 #endif
 
-const bool continue_on_failure = true;
+const bool continue_on_failure = false;
 
 class Solution {
 public:

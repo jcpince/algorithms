@@ -10,7 +10,9 @@
 
 using namespace std;
 
+#ifdef DEBUG
 const bool continue_on_failure = false;
+#endif
 
 class Solution {
     void inline swap_layer(vector<vector<int>>& matrix, size_t layer) {

@@ -11,7 +11,9 @@
 
 using namespace std;
 
+#ifdef DEBUG
 const bool continue_on_failure = false;
+#endif
 
 class Solution {
 public:
@@ -25,7 +27,7 @@ public:
                 make_pair((uint64_t)p[0] * (uint64_t)p[0] + (uint64_t)p[1] * (uint64_t)p[1], p));
 
         sort(square_distances.begin(), square_distances.end());
-        for (index = 0 ; index < K ; index++) {
+        for (index = 0 ; index < (size_t)K ; index++) {
             pair<uint64_t, vector<int>> p = square_distances[index];
             result.push_back(p.second);
         }

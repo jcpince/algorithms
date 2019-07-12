@@ -10,7 +10,9 @@
 
 using namespace std;
 
+#ifdef DEBUG
 const bool continue_on_failure = false;
+#endif
 
 #define DEAD    0
 #define ALIVE   1

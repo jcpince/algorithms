@@ -81,7 +81,9 @@ Note: Answer will in the range of 32-bit signed integer.
 
 using namespace std;
 
+#ifdef DEBUG
 const bool continue_on_failure = false;
+#endif
 
 class Solution {
 public:
@@ -97,11 +99,11 @@ public:
         uint64_t maxWidth = 1;
 
         while (visit->size()) {
-            uint64_t last_index = 0, first_index = -1;
+            uint64_t last_index = 0, first_index = ~0;
             for ( pair<uint64_t, TreeNode*> p : (*visit) ) {
                 uint64_t index = p.first;
                 TreeNode* n = p.second;
-                if (first_index == -1) first_index = index;
+                if (first_index == ~0ULL) first_index = index;
                 last_index = index;
 
                 if (n->left) visit_next->push_back(make_pair(index * 2, n->left));
@@ -128,7 +130,8 @@ int run_test_case(void *_s, TestCase *tc)
     vector<int> vtree = tc->test_case[JSON_TEST_CASE_IN_FIELDNAME];
     int expected = tc->test_case[JSON_TEST_CASE_EXPECTED_FIELDNAME];
 
-    struct TreeNode tree[vtree.size()] = {0};
+    struct TreeNode tree[vtree.size()];
+    bzero(tree, vtree.size()*sizeof(struct TreeNode));
     vector2tree(vtree, tree);
 
     Solution s;

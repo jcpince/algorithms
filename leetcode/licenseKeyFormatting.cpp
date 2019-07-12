@@ -47,7 +47,9 @@ Note:
 
 using namespace std;
 
+#ifdef DEBUG
 const bool continue_on_failure = false;
+#endif
 
 class Solution {
 public:

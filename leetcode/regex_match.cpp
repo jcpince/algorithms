@@ -71,7 +71,9 @@ using namespace std;
 #define dev_assert(...)
 #endif
 
+#ifdef DEBUG
 const bool continue_on_failure = false;
+#endif
 
 /* -------------- INCOMPLETE -------------- */
 

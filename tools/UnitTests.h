@@ -34,7 +34,6 @@ private:
     int run_single_test_case(const char *tc_id);
     int run_all_test_cases();
 
-    const char *filename;
     json alltests;
     void *classUnderTest;
     testcase_runner tc_runner;

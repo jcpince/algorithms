@@ -36,7 +36,9 @@ using namespace std;
 #define dev_assert(...)
 #endif
 
+#ifdef DEBUG
 const bool continue_on_failure = false;
+#endif
 
 class Solution {
     bool isPalindrome(int dir, string &s, int start_idx, int end_idx)

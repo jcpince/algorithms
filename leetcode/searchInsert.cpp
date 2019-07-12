@@ -47,7 +47,7 @@ Output: 0
 
 using namespace std;
 
-const bool continue_on_failure = true;
+const bool continue_on_failure = false;
 
 class Solution {
 public:
