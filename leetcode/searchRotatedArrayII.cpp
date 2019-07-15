@@ -43,39 +43,61 @@ using namespace std;
 const bool continue_on_failure = false;
 #endif
 
+template <class T>
+int findSorted3(vector<T> array, T value, int start, int end)
+{
+    int middle;
+    if (array[start] == value) return start;
+    if (array[end] == value) return end;
+    if(start == end) return -1;
+
+    while(start < end)
+    {
+        middle = (start + end) / 2;
+        if(array[middle] == value) return middle;
+        else if (array[middle] > value) end = middle - 1;
+        else start = middle + 1;
+    }
+    return -1;
+}
+
 class Solution {
     int findPivot_logn(vector<int>& nums, int start = 0, int end = -1) {
         if (end == -1) end = nums.size() - 1;
         if (end < 1) return -1;
-        if (nums[end] > nums[start]) return 0;
+        //if (nums[end] > nums[start]) return 0;
 
-        int middle = start, left = start, right = end;
+        int middle = -1, left = start, right = end;
         while (left < right) {
-            int middle = left + (right - left) / 2;
-            printf("lmr(%d, %d, %d)\n", left, middle, right);
-            if ((nums[middle] > nums[left]) or (nums[middle] > nums[right])) {
+            if (left + 1 == right) return (nums[left] <= nums[right] ? -1 : right);
+            middle = left + (right - left) / 2;
+            debug_print("lmr(%d, %d, %d)\n", left, middle, right);
+            if ((nums[left] > nums[middle])) {
                 // strict monotonous right section, the pivot is on the left
+                debug_print("Go left\n");
                 right = middle;
-            } else if ((nums[middle] < nums[right]) or (nums[middle] < nums[left])) {
+            } else if ((nums[middle] < nums[right])) {
                 // strict monotonous left section, the pivot is on the right
-                left = middle + 1;
+                debug_print("Go right\n");
+                left = middle;
             } else {
                 // We have potential duplicates on one or both sides
+                debug_print("Go both sides\n");
                 int res = findPivot_logn(nums, left, middle);
                 if (res != -1) return res;
                 res = findPivot_logn(nums, middle, right);
                 return res;
             }
         }
-        return middle+1;
+        return middle;
     }
     int findPivot(vector<int>& nums) {
         if (nums.size() < 2) {
-            printf("findPivot(%s)_uc0 -> -1\n", array2str(nums).c_str());
+            //printf("findPivot(%s)_uc0 -> -1\n", array2str(nums).c_str());
             return -1;
         }
         if (nums.back() > nums.front()) {
-            printf("findPivot(%s)_uc1 -> 0\n", array2str(nums).c_str());
+            //printf("findPivot(%s)_uc1 -> 0\n", array2str(nums).c_str());
             return 0;
         }
 
@@ -84,15 +106,29 @@ class Solution {
 
         if ((pivot+1) == (int)nums.size() and nums[pivot-2] <= nums[pivot-1]) pivot = -1;
 
-        printf("findPivot(%s) -> %d\n", array2str(nums).c_str(), pivot+1);
+        //printf("findPivot(%s) -> %d\n", array2str(nums).c_str(), pivot+1);
         return pivot+1;
     }
 
     bool findInRotated(vector<int>& nums, int target, int pivot) {
+        if (pivot < 0) pivot = 0; // sorted array
         if (nums[pivot] == target) return true;
+        if (nums[pivot] > target) return false;
 
-        if (nums[pivot] < target and nums.back() > target) return findSorted(nums, target, pivot, nums.size()-1) != -1;
-        return findSorted(nums, target, 0, pivot) != -1;
+        int start, end;
+        int last = nums.back();
+        if (last < target) {
+            // target > pivot but also above the last value of the array => between 0 and pivot
+            start = 0;
+            if (pivot == 0) return false;
+            end = pivot-1;
+        } else {
+            // target > pivot but below the last value of the array => between pivot and end
+            start = pivot+1;
+            end = nums.size()-1;
+        }
+        printf("findSorted3(%s. %d, %d, %d)\n", array2str(nums).c_str(), target, start, end);
+        return findSorted3(nums, target, start, end) != -1;
     }
 public:
     bool search(vector<int>& nums, int target) {
@@ -104,7 +140,7 @@ public:
         int pivot = findPivot_logn(nums);
         printf("findPivot_logn(%s) -> %d\n", array2str(nums).c_str(), pivot);
         assert(pivot == findPivot(nums));
-        return findInRotated(nums, target, 0);
+        return findInRotated(nums, target, pivot);
     }
 };
 

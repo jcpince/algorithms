@@ -75,3 +75,9 @@ target_link_libraries(gameOfLife unittests)
 
 add_executable(searchRotatedArrayII searchRotatedArrayII.cpp)
 target_link_libraries(searchRotatedArrayII unittests)
+
+add_executable(numIslands numIslands.cpp)
+target_link_libraries(numIslands unittests)
+
+add_executable(maxProfit maxProfit.cpp)
+target_link_libraries(maxProfit unittests)
