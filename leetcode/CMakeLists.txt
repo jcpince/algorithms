@@ -81,3 +81,9 @@ target_link_libraries(numIslands unittests)
 
 add_executable(maxProfit maxProfit.cpp)
 target_link_libraries(maxProfit unittests)
+
+add_executable(gcdOfStrings gcdOfStrings.cpp)
+target_link_libraries(gcdOfStrings unittests)
+
+add_executable(BSTFindTargetSum BSTFindTargetSum.cpp)
+target_link_libraries(BSTFindTargetSum unittests)

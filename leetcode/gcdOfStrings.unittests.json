@@ -1,0 +1,45 @@
+{
+    "tests" :
+    [
+        {
+            "in"        :
+            {
+                "str1"  : "ABCABC",
+                "str2"  : "ABC"
+            },
+            "expected"  : "ABC"
+        },
+        {
+            "in"        :
+            {
+                "str1"  : "ABABAB",
+                "str2"  : "ABAB"
+            },
+            "expected"  : "AB"
+        },
+        {
+            "in"        :
+            {
+                "str1"  : "LEET",
+                "str2"  : "CODE"
+            },
+            "expected"  : ""
+        },
+        {
+            "in"        :
+            {
+                "str1"  : "AAAA",
+                "str2"  : "AAAB"
+            },
+            "expected"  : ""
+        },
+        {
+            "in"        :
+            {
+                "str1"  : "AAAAAAAA",
+                "str2"  : "AA"
+            },
+            "expected"  : "AA"
+        }
+    ]
+}
