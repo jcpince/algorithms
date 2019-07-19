@@ -88,8 +88,11 @@ target_link_libraries(gcdOfStrings unittests)
 add_executable(BSTFindTargetSum BSTFindTargetSum.cpp)
 target_link_libraries(BSTFindTargetSum unittests)
 
-add_executable(toti toti.cpp)
-target_link_libraries(toti unittests)
-
 add_executable(findShortestSubArray findShortestSubArray.cpp)
 target_link_libraries(findShortestSubArray unittests)
+
+add_executable(addTwoNumbers2 addTwoNumbers2.cpp)
+target_link_libraries(addTwoNumbers2 unittests)
+
+add_executable(trimBST trimBST.cpp)
+target_link_libraries(trimBST unittests)
