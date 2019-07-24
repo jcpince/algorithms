@@ -96,3 +96,6 @@ target_link_libraries(addTwoNumbers2 unittests)
 
 add_executable(trimBST trimBST.cpp)
 target_link_libraries(trimBST unittests)
+
+add_executable(triangle triangle.cpp)
+target_link_libraries(triangle unittests)
