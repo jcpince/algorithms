@@ -105,3 +105,9 @@ target_link_libraries(kclosest unittests)
 
 add_executable(searchSortedMatrix searchSortedMatrix.cpp)
 target_link_libraries(searchSortedMatrix unittests)
+
+add_executable(spiralMatrixII spiralMatrixII.cpp)
+target_link_libraries(spiralMatrixII unittests)
+
+add_executable(isOneBitCharacter isOneBitCharacter.cpp)
+target_link_libraries(isOneBitCharacter unittests)
