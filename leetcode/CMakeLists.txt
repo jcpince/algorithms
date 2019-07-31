@@ -99,3 +99,9 @@ target_link_libraries(trimBST unittests)
 
 add_executable(triangle triangle.cpp)
 target_link_libraries(triangle unittests)
+
+add_executable(kclosest kclosest.cpp)
+target_link_libraries(kclosest unittests)
+
+add_executable(searchSortedMatrix searchSortedMatrix.cpp)
+target_link_libraries(searchSortedMatrix unittests)
