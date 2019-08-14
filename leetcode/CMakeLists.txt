@@ -109,5 +109,5 @@ target_link_libraries(searchSortedMatrix unittests)
 add_executable(spiralMatrixII spiralMatrixII.cpp)
 target_link_libraries(spiralMatrixII unittests)
 
-add_executable(isOneBitCharacter isOneBitCharacter.cpp)
-target_link_libraries(isOneBitCharacter unittests)
+add_executable(maxSumOfThreeSubarrays maxSumOfThreeSubarrays.cpp)
+target_link_libraries(maxSumOfThreeSubarrays unittests)
