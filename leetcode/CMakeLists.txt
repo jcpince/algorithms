@@ -111,3 +111,6 @@ target_link_libraries(spiralMatrixII unittests)
 
 add_executable(maxSumOfThreeSubarrays maxSumOfThreeSubarrays.cpp)
 target_link_libraries(maxSumOfThreeSubarrays unittests)
+
+add_executable(maxBinaryTree maxBinaryTree.cpp)
+target_link_libraries(maxBinaryTree unittests)
