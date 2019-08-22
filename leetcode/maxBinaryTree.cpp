@@ -61,6 +61,7 @@ int run_test_case(void *_s, TestCase *tc) {
     Solution s;
     TreeNode *result = s.constructMaximumBinaryTree(nums);
     vector<int> vresult = tree2vector(result);
+    deleteDynTree(result);
 
     if (check_result(vresult, expected)) return 0;
 

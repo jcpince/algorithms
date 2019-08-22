@@ -114,3 +114,6 @@ target_link_libraries(maxSumOfThreeSubarrays unittests)
 
 add_executable(maxBinaryTree maxBinaryTree.cpp)
 target_link_libraries(maxBinaryTree unittests)
+
+add_executable(bstFromPreorder bstFromPreorder.cpp)
+target_link_libraries(bstFromPreorder unittests)

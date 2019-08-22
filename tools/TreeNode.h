@@ -18,5 +18,6 @@ typedef struct TreeNode {
 
 void vector2tree(vector<int> &v, TreeNode *tree);
 vector<int> tree2vector(TreeNode *tree);
+void deleteDynTree(TreeNode *tree);
 
 #endif

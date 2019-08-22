@@ -27,12 +27,12 @@ void vector2tree(vector<int> &v, struct TreeNode *tree) {
 
 vector<int> tree2vector(struct TreeNode *tree) {
     vector<int> v;
-    vector<struct TreeNode *> vnodes = {tree};
+    queue<TreeNode *> q;
+    q.push(tree);
 
-    while ( vnodes.size() )  {
-        struct TreeNode *node = vnodes.back();
-        node = vnodes.front();
-        vnodes.erase(vnodes.begin());
+    while ( !q.empty() )  {
+        TreeNode *node = q.front();
+        q.pop();
 
         if (node) {
             if (node->left)
@@ -45,9 +45,23 @@ vector<int> tree2vector(struct TreeNode *tree) {
 
         if (node) {
             v.push_back(node->val);
-            vnodes.push_back(node->left);
-            vnodes.push_back(node->right);
+            q.push(node->left);
+            q.push(node->right);
         } else v.push_back(-1);
     }
     return v;
+}
+
+void deleteDynTree(TreeNode *tree) {
+    queue<TreeNode *> q;
+    q.push(tree);
+
+    while ( !q.empty() )  {
+        TreeNode *node = q.front();
+        q.pop();
+
+        if (node->left) q.push(node->left);
+        if (node->right) q.push(node->right);
+        delete node;
+    }
 }
