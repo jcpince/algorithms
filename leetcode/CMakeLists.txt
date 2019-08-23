@@ -117,3 +117,6 @@ target_link_libraries(maxBinaryTree unittests)
 
 add_executable(bstFromPreorder bstFromPreorder.cpp)
 target_link_libraries(bstFromPreorder unittests)
+
+add_executable(combinationSum3 combinationSum3.cpp)
+target_link_libraries(combinationSum3 unittests)

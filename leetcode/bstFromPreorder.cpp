@@ -41,7 +41,7 @@ public:
     	TreeNode *root = new TreeNode(preOrder[0]);
     	s.push(root);
     	TreeNode *current;
-    	for (int i = 1; i < preOrder.size(); ++i) {
+    	for (int i = 1; i < (int)preOrder.size(); ++i) {
     		TreeNode *temp = new TreeNode(preOrder[i]);
     		if (s.top() -> val > temp -> val) {
     			current = s.top();
