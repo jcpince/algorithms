@@ -120,3 +120,12 @@ target_link_libraries(bstFromPreorder unittests)
 
 add_executable(combinationSum3 combinationSum3.cpp)
 target_link_libraries(combinationSum3 unittests)
+
+add_executable(largestRectangleArea largestRectangleArea.cpp)
+target_link_libraries(largestRectangleArea unittests)
+
+add_executable(nthUglyNumber nthUglyNumber.cpp)
+target_link_libraries(nthUglyNumber unittests)
+
+add_executable(relativeSortArray relativeSortArray.cpp)
+target_link_libraries(relativeSortArray unittests)
