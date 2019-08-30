@@ -11,6 +11,22 @@ using namespace std;
 
 const bool continue_on_failure = false;
 
+/*
+class Solution {
+public:
+    TreeNode* trimBST(TreeNode* root, int L, int R) {
+        while (root and (root->val > R)) root = root->left;
+        while (root and (root->val < L)) root = root->right;
+
+        if (root) {
+            root->left = trimBST(root->left, L, R);
+            root->right = trimBST(root->right, L, R);
+        }
+        return root;
+    }
+};
+*/
+
 class Solution {
     TreeNode* findChildInRange(TreeNode* root, int L, int R) {
         TreeNode* child = root;

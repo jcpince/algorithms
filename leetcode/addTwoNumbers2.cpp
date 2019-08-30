@@ -11,6 +11,68 @@ using namespace std;
 
 const bool continue_on_failure = false;
 
+/*class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        stack<pair<int, int>> s;
+        int l1len = 0, l2len = 0;
+        ListNode* _l1 = l1, *_l2 = l2;
+        while (_l1 or _l2) {
+            if (_l1) {
+                _l1 = _l1->next;
+                l1len++;
+            }
+            if (_l2) {
+                _l2 = _l2->next;
+                l2len++;
+            }
+        }
+
+        if (l1len != l2len) {
+            if (l1len > l2len) {
+                while (l1len > l2len) {
+                    s.push(make_pair(l1->val, 0));
+                    l1 = l1->next;
+                    l1len--;
+                }
+            } else {
+                while (l1len < l2len) {
+                    s.push(make_pair(0, l2->val));
+                    l2 = l2->next;
+                    l1len++;
+                }
+            }
+        }
+
+        while (l1) {
+            s.push(make_pair(l1->val, l2->val));
+            l1 = l1->next;
+            l2 = l2->next;
+        }
+        ListNode *result = nullptr;
+        int v1, v2, carry = 0;
+        while (!s.empty()) {
+            pair<int, int> p = s.top();
+            s.pop();
+            v1 = p.first;
+            v2 = p.second;
+            v1 += v2 + carry;
+            carry = v1 > 9 ? 1 : 0;
+            if (carry) v1 -= 10;
+            ListNode *node = new ListNode(v1);
+            node->next = result;
+            result = node;
+            //printf("result[%d] is %d\n", s.size(), v1);
+        }
+        if (carry) {
+            ListNode *node = new ListNode(1);
+            node->next = result;
+            result = node;
+        }
+        return result;
+    }
+};*/
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {

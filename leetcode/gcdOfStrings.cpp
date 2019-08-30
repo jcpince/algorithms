@@ -52,6 +52,51 @@ public:
     }
 };
 
+/*class Solution {
+    bool compare(string &shortest, string &longest, int len) {
+        const char *s1 = shortest.c_str(), *s2 = longest.c_str(), *limit = &s1[len];
+        while ((s1 < limit) && (*s1++ == *s2++));
+        return s1 == limit;
+    }
+public:
+    string gcdOfStrings(const string &str1, const string &str2) {
+        string shortest = str2.length() > str1.length() ? str1 : str2;
+        string longest = str2.length() > str1.length() ? str2 : str1;
+
+        if (longest.compare(0, shortest.length(), shortest)) return "";
+
+        int length = shortest.length(), multiple = 1, pidx = 0;
+        const char *slong, *sshort, *pattern = shortest.c_str();
+        while (length) {
+            pidx = 0;
+            //printf("Check the pattern with %d chars -- %d -- compare(%s, %s)= %d\n", length,
+            //      longest.length() % length, longest.c_str(), shortest.c_str(), compare(shortest, longest, length));
+            if (!(longest.length() % length) and compare(shortest, longest, length)) {
+                // candidate, check the pattern
+                //printf("Check the pattern %s\n", str1.substr(0, length).c_str());
+                sshort = &shortest.c_str()[length];
+                while (*sshort && *sshort == pattern[pidx]) {
+                    sshort++;
+                    pidx++;
+                    if (pidx == length) pidx = 0;
+                }
+                if (!pidx) {
+                    slong = &longest.c_str()[length];
+                    while (*slong && *slong == pattern[pidx]) {
+                        slong++;
+                        pidx++;
+                        if (pidx == length) pidx = 0;
+                    }
+                    if (!pidx) return str1.substr(0, length);
+                }
+            }
+            while ((shortest.length() % ++multiple) and (multiple <= shortest.length()));
+            length = shortest.length() / multiple;
+        }
+        return "";
+    }
+};*/
+
 int run_test_case(void *_s, TestCase *tc) {
     UNUSED(_s);
     string str1 = tc->test_case[JSON_TEST_CASE_IN_FIELDNAME]["str1"];

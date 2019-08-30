@@ -129,3 +129,6 @@ target_link_libraries(nthUglyNumber unittests)
 
 add_executable(relativeSortArray relativeSortArray.cpp)
 target_link_libraries(relativeSortArray unittests)
+
+add_executable(numberOfArithmeticSlices numberOfArithmeticSlices.cpp)
+target_link_libraries(numberOfArithmeticSlices unittests)

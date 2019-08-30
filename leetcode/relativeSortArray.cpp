@@ -23,7 +23,7 @@ public:
             if (it == arr1.end()) continue;
 
             int arr1_idx = distance(arr1.begin(), it);
-            while (arr1_idx < arr1.size() && arr1[arr1_idx] == a) {
+            while (arr1_idx < (int)arr1.size() && arr1[arr1_idx] == a) {
                 ans[idx++] = a;
                 arr1[arr1_idx] = -1; // mark arr1[x] as used
                 arr1_idx++;
