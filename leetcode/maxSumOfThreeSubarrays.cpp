@@ -164,7 +164,7 @@ public:
     vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int width) {
         //printf("Array(%s), width %d\n", array2str(nums).c_str(), width);
         int maxSum = INT_MIN;
-        size_t left, middle, right, ns = nums.size() - 2 * width + 1;
+        size_t left = 0, middle = 0, right = 0, ns = nums.size() - 2 * width + 1;
 
         preprocess_nums(nums, width);
 

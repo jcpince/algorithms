@@ -39,3 +39,6 @@ target_link_libraries(graph_shortest_reach unittests)
 
 add_executable(candies candies.cpp)
 target_link_libraries(candies unittests)
+
+add_executable(climbingLeaderboard climbingLeaderboard.cpp)
+target_link_libraries(climbingLeaderboard unittests)
