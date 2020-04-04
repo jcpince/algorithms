@@ -1,0 +1,141 @@
+{
+    "tests" :
+    [
+        {
+            "in"        :
+            {
+                "str"         : "aa",
+                "pattern"     : "a"
+            },
+            "expected"  : false
+        },
+	{
+            "in"        :
+            {
+                "str"         : "aa",
+                "pattern"     : "b"
+            },
+            "expected"  : false
+        },
+	{
+            "in"        :
+            {
+                "str"         : "aa",
+                "pattern"     : "aa"
+            },
+            "expected"  : true
+        },
+	{
+            "in"        :
+            {
+                "str"         : "aa",
+                "pattern"     : "a*"
+            },
+            "expected"  : true
+        },
+	{
+            "in"        :
+            {
+                "str"         : "ab",
+                "pattern"     : ".*"
+            },
+            "expected"  : true
+        },
+	{
+            "in"        :
+            {
+                "str"         : "ab",
+                "pattern"     : ".*b"
+            },
+            "expected"  : true
+        },
+	{
+            "in"        :
+            {
+                "str"         : "ab",
+                "pattern"     : ".*a"
+            },
+            "expected"  : false
+        },
+	{
+            "in"        :
+            {
+                "str"         : "aab",
+                "pattern"     : "c*a*b"
+            },
+            "expected"  : true
+        },
+	{
+            "in"        :
+            {
+                "str"         : "mississippi",
+                "pattern"     : "mis*is*p*."
+            },
+            "expected"  : false
+        },
+	{
+            "in"        :
+            {
+                "str"         : "mississippi",
+                "pattern"     : "mis*is*ip*."
+            },
+            "expected"  : true
+        },
+	{
+            "in"        :
+            {
+                "str"         : "a",
+                "pattern"     : "ab*a"
+            },
+            "expected"  : false
+        },
+	{
+            "in"        :
+            {
+                "str"         : "a",
+                "pattern"     : "ab*."
+            },
+            "expected"  : false
+        },
+	{
+            "in"        :
+            {
+                "str"         : "bbbbba",
+                "pattern"     : ".*a*a"
+            },
+            "expected"  : true
+        },
+	{
+            "in"        :
+            {
+                "str"         : "",
+                "pattern"     : ""
+            },
+            "expected"  : true
+        },
+	{
+            "in"        :
+            {
+                "str"         : "a",
+                "pattern"     : ""
+            },
+            "expected"  : false
+        },
+	{
+            "in"        :
+            {
+                "str"         : "",
+                "pattern"     : "a"
+            },
+            "expected"  : false
+        },
+	{
+            "in"        :
+            {
+                "str"         : "",
+                "pattern"     : "c*c*"
+            },
+            "expected"  : true
+        }
+    ]
+}

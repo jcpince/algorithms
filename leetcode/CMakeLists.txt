@@ -132,3 +132,18 @@ target_link_libraries(relativeSortArray unittests)
 
 add_executable(numberOfArithmeticSlices numberOfArithmeticSlices.cpp)
 target_link_libraries(numberOfArithmeticSlices unittests)
+
+add_executable(regularExpressionMatching regularExpressionMatching.cpp)
+target_link_libraries(regularExpressionMatching unittests)
+
+add_executable(reverse-nodes-in-k-group reverse-nodes-in-k-group.cpp)
+target_link_libraries(reverse-nodes-in-k-group unittests)
+
+add_executable(substring-with-concatenation-of-all-words substring-with-concatenation-of-all-words.cpp)
+target_link_libraries(substring-with-concatenation-of-all-words unittests)
+
+add_executable(longest-valid-parentheses longest-valid-parentheses.cpp)
+target_link_libraries(longest-valid-parentheses unittests)
+
+add_executable(find-first-and-last-position-of-element-in-sorted-array find-first-and-last-position-of-element-in-sorted-array.cpp)
+target_link_libraries(find-first-and-last-position-of-element-in-sorted-array unittests)

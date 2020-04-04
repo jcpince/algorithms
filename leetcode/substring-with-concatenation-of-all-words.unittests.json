@@ -1,0 +1,77 @@
+{
+        "tests" :
+        [
+                {
+                        "in"        :
+                        {
+                                "words" : ["foo","bar"],
+                                "s"     : "barfoothefoobarmanfoo"
+                        },
+                        "expected"  : [0,9]
+                },
+                {
+                        "in"        :
+                        {
+                                "words" : ["foo","bar","foo"],
+                                "s"     : "barfoothefoobarman"
+                        },
+                        "expected"  : []
+                },
+                {
+                        "in"        :
+                        {
+                                "words" : ["word","good","best","word"],
+                                "s"     : "wordgoodgoodgoodbestword"
+                        },
+                        "expected"  : []
+                },
+                {
+                        "in"        :
+                        {
+                                "words" : ["word","good","best","word"],
+                                "s"     : "wordgoodwordgoodgoodbestword"
+                        },
+                        "expected"  : []
+                },
+                {
+                        "in"        :
+                        {
+                                "words" : ["word","good","best","word"],
+                                "s"     : "wordbestgoodwordgoodgoodbestword"
+                        },
+                        "expected"  : [0]
+                },
+                {
+                        "in"        :
+                        {
+                                "words" : ["word","good","best","word"],
+                                "s"     : "wordgoodwordgoodgoodbestwordword"
+                        },
+                        "expected"  : [16]
+                },
+                {
+                        "in"        :
+                        {
+                                "words" : ["ca","cc"],
+                                "s"     : "cccab"
+                        },
+                        "expected"  : [0]
+                },
+                {
+                        "in"        :
+                        {
+                                "words" : ["c","c","a","b"],
+                                "s"     : "bccaraccrb"
+                        },
+                        "expected"  : [0]
+                },
+                {
+                        "in"        :
+                        {
+                                "words" : ["aaa","aaa"],
+                                "s"     : "aaaaaa"
+                        },
+                        "expected"  : [0]
+                }
+        ]
+}
