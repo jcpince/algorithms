@@ -1,0 +1,14 @@
+{
+        "tests" :
+        [
+                {
+                        "in"        : ["eat", "tea", "tan", "ate", "nat", "bat"],
+                        "expected"  :
+                        [
+                                ["eat","tea", "ate"],
+                                ["tan","nat"],
+                                ["bat"]
+                        ]
+                }
+        ]
+}

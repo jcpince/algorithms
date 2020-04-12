@@ -147,3 +147,36 @@ target_link_libraries(longest-valid-parentheses unittests)
 
 add_executable(find-first-and-last-position-of-element-in-sorted-array find-first-and-last-position-of-element-in-sorted-array.cpp)
 target_link_libraries(find-first-and-last-position-of-element-in-sorted-array unittests)
+
+add_executable(valid-sudoku valid-sudoku.cpp)
+target_link_libraries(valid-sudoku unittests)
+
+add_executable(sudoku-solver sudoku-solver.cpp)
+target_link_libraries(sudoku-solver unittests)
+
+add_executable(best-time-to-buy-and-sell-stock-II best-time-to-buy-and-sell-stock-II.cpp)
+target_link_libraries(best-time-to-buy-and-sell-stock-II unittests)
+
+add_executable(group-anagrams group-anagrams.cpp)
+target_link_libraries(group-anagrams unittests)
+
+add_executable(pascalTriangle2 pascalTriangle2.cpp)
+target_link_libraries(pascalTriangle2 unittests)
+
+add_executable(generateTrees generateTrees.cpp)
+target_link_libraries(generateTrees unittests)
+
+add_executable(counting-elements counting-elements.cpp)
+target_link_libraries(counting-elements unittests)
+
+add_executable(multiply-strings multiply-strings.cpp)
+target_link_libraries(multiply-strings unittests)
+
+add_executable(min-stack min-stack.cpp)
+target_link_libraries(min-stack unittests)
+
+add_executable(wildcard-matching wildcard-matching.cpp)
+target_link_libraries(wildcard-matching unittests)
+
+add_executable(binary-tree-diameter binary-tree-diameter.cpp)
+target_link_libraries(binary-tree-diameter unittests)

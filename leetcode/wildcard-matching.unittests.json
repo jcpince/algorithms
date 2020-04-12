@@ -1,0 +1,93 @@
+{
+        "tests" :
+        [
+                {
+                        "in"        :
+                        {
+                                "s" : "aa",
+                                "p" : "a"
+                        },
+                        "expected"  : false
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "abba",
+                                "p" : "a??a"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "abba",
+                                "p" : "a?*a"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "abca",
+                                "p" : "a?*a"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "",
+                                "p" : "*"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "qw",
+                                "p" : "*"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "aa",
+                                "p" : "*"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "cb",
+                                "p" : "?a"
+                        },
+                        "expected"  : false
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "adceb",
+                                "p" : "*a*b"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "acdcb",
+                                "p" : "a*c?b"
+                        },
+                        "expected"  : false
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "mississippi",
+                                "p" : "m??*ss*?i*pi"
+                        },
+                        "expected"  : true
+                }
+        ]
+}

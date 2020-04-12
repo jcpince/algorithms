@@ -1,0 +1,26 @@
+{
+        "tests" :
+        [
+                {
+                        "in"        :
+                        {
+                                "ops" : ["MinStack","push","push","push","getMin",
+                                "pop","top","getMin"],
+                                "args" :
+                                [[],[-2],[0],[-3],[],[],[],[]]
+                        },
+                        "expected"  : [[],[],[],[],[-3],[],[0],[-2]]
+                },
+                {
+                        "in"        :
+                        {
+                                "ops" : ["MinStack","push","push","push","push",
+                                "getMin","pop","getMin","pop","getMin",
+                                "pop","getMin"],
+                                "args" :
+                                [[],[2],[0],[3],[0],[],[],[],[],[],[],[]]
+                        },
+                        "expected"  : [[],[],[],[],[],[0],[],[0],[],[0],[],[2]]
+                }
+        ]
+}
