@@ -4,7 +4,8 @@
 void vector2tree(vector<int> &v, struct TreeNode *tree) {
     size_t idx = 0;
     struct TreeNode *node = &tree[idx++];
-    node->val = v[idx-1];
+    if (!v.size()) return;
+    node->val = v[0];
 
     vector<struct TreeNode *> vnodes = {node};
     while ( idx < v.size() )  {
@@ -25,6 +26,7 @@ void vector2tree(vector<int> &v, struct TreeNode *tree) {
     }
 }
 
+#if 0 /* bfs */
 vector<int> tree2vector(struct TreeNode *tree) {
     vector<int> v;
     queue<TreeNode *> q;
@@ -48,6 +50,64 @@ vector<int> tree2vector(struct TreeNode *tree) {
             q.push(node->left);
             q.push(node->right);
         } else v.push_back(-1);
+    }
+    return v;
+}
+#endif
+
+/*void print_queue(queue<struct TreeNode*> q)
+{
+        std::cout << "new queue: ";
+        while (!q.empty())
+        {
+                struct TreeNode* node = q.front();
+                int val = node ? node->val : -1;
+                std::cout << val << " ";
+                q.pop();
+        }
+        std::cout << std::endl;
+}*/
+
+vector<int> tree2vector(struct TreeNode *root) {
+    vector<int> v;
+    queue<TreeNode *> q1, q2, *layer = &q1, *nextlayer = &q2, *_tmp;
+    layer->push(root);
+    int nodecount = 0, next_nodecount = 0;
+    //int new_layer = 1;
+
+    while ( !layer->empty() )  {
+        //if (new_layer) print_queue(*layer);
+        //new_layer = 0;
+        TreeNode *node = layer->front();
+        layer->pop();
+
+        if (!node) {
+                if (nodecount > 0 || next_nodecount) {
+                        //printf("push -1\n");
+                        v.push_back(-1);
+                }
+        }
+        else {
+                //printf("Node %p->val %d\n", node, node->val);
+                v.push_back(node->val);
+                if (node->left) next_nodecount++;
+                if (node->right) next_nodecount++;
+                nextlayer->push(node->left);
+                nextlayer->push(node->right);
+                nodecount--;
+        }
+
+        if (layer->empty()) {
+                /* swap the queues */
+                _tmp = layer;
+                if (next_nodecount > 0) {
+                        layer = nextlayer;
+                        nodecount = next_nodecount;
+                }
+                nextlayer = _tmp;
+                next_nodecount = 0;
+                //new_layer = 1;
+        }
     }
     return v;
 }
