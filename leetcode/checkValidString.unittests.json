@@ -1,0 +1,21 @@
+{
+        "tests" :
+        [
+                {
+                        "in"        : "()",
+                        "expected"  : true
+                },
+                {
+                        "in"        : "(()()())",
+                        "expected"  : true
+                },
+                {
+                        "in"        : "(()()()))",
+                        "expected"  : false
+                },
+                {
+                        "in"        : "))((",
+                        "expected"  : false
+                }
+        ]
+}

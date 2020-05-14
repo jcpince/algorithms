@@ -180,3 +180,42 @@ target_link_libraries(wildcard-matching unittests)
 
 add_executable(binary-tree-diameter binary-tree-diameter.cpp)
 target_link_libraries(binary-tree-diameter unittests)
+
+add_executable(last-stone-weight last-stone-weight.cpp)
+target_link_libraries(last-stone-weight unittests)
+
+add_executable(jump-game-II jump-game-II.cpp)
+target_link_libraries(jump-game-II unittests)
+
+add_executable(permutations permutations.cpp)
+target_link_libraries(permutations unittests)
+
+add_executable(permutationsII permutationsII.cpp)
+target_link_libraries(permutationsII unittests)
+
+add_executable(contiguous-array contiguous-array.cpp)
+target_link_libraries(contiguous-array unittests)
+
+add_executable(perform_string_shift perform_string_shift.cpp)
+target_link_libraries(perform_string_shift unittests)
+
+add_executable(checkValidString checkValidString.cpp)
+target_link_libraries(checkValidString unittests)
+
+add_executable(spiralMatrix spiralMatrix.cpp)
+target_link_libraries(spiralMatrix unittests)
+
+add_executable(numIslands2 numIslands2.cpp)
+target_link_libraries(numIslands2 unittests)
+
+add_executable(minpathsum minpathsum.cpp)
+target_link_libraries(minpathsum unittests)
+
+add_executable(bst-from-preorder bst-from-preorder.cpp)
+target_link_libraries(bst-from-preorder unittests)
+
+add_executable(left-most-with-one left-most-with-one.cpp)
+target_link_libraries(left-most-with-one unittests)
+
+add_executable(subarry-sum subarry-sum.cpp)
+target_link_libraries(subarry-sum unittests)

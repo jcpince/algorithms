@@ -87,7 +87,79 @@
                                 "s" : "mississippi",
                                 "p" : "m??*ss*?i*pi"
                         },
+                        "expected"  : false
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "aaabbbaabaaaaababaabaaabbabbbbbbbbaabababbabbbaaaaba",
+                                "p" : "a*******b"
+                        },
+                        "expected"  : false
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "abbabaaabbabbaababbabbbbbabbbabbbabaaaaababababbbabababaabbababaabbbbbbaaaabababbbaabbbbaabbbbababababbaabbaababaabbbababababbbbaaabbbbbabaaaabbababbbbaababaabbababbbbbababbbabaaaaaaaabbbbbaabaaababaaaabb",
+                                "p" : "**aa*****ba*a*bb**aa*ab****a*aaaaaa***a*aaaa**bbabb*b*b**aaaaaaaaa*a********ba*bbb***a*ba*bb*bb**a*b*bb"
+                        },
+                        "expected"  : false
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "abbabaaabbabbaababbabbbbbabbbabbbabaaaaababababbbabababaabbababaabbbbbbaaaabababbbaabbbbaabbbbababababbaabbaababaabbbababababbbbaaabbbbbabaaaabbababbbbaababaabbababbbbbababbbabaaaaaaaabbbbbaabaaababaaaabbbbabbbbaaaaaaaaaa*ba*bbb*a*ba*bb*bb**a*b*bb",
+                                "p" : "**aa*****ba*a*bb**aa*ab****a*aaaaaa***a*aaaa**bbabb*b*b**aaaaaaaaa*a********ba*bbb***a*ba*bb*bb**a*b*bb"
+                        },
                         "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "abefcdgiescdfimde",
+                                "p" : "ab*cd?i*de"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "hi",
+                                "p" : "*?"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "aaab",
+                                "p" : "b*"
+                        },
+                        "expected"  : false
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "abb",
+                                "p" : "**??"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "ab",
+                                "p" : "*a*"
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        :
+                        {
+                                "s" : "abce",
+                                "p" : "abc*??"
+                        },
+                        "expected"  : false
                 }
         ]
 }
