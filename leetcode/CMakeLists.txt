@@ -219,3 +219,6 @@ target_link_libraries(left-most-with-one unittests)
 
 add_executable(subarry-sum subarry-sum.cpp)
 target_link_libraries(subarry-sum unittests)
+
+add_executable(isValidSequence isValidSequence.cpp)
+target_link_libraries(isValidSequence unittests)

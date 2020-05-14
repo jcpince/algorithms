@@ -2,6 +2,8 @@ ALGO_ROOTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ALGO_BUILDDIR=${ALGO_ROOTDIR}/build
 
+export PATH=$PATH:${ALGO_ROOTDIR}/build/bin
+
 algo_buildexists()
 {
     if [ ! -d ${ALGO_BUILDDIR} ]; then
