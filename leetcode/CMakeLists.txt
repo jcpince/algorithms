@@ -222,3 +222,27 @@ target_link_libraries(subarry-sum unittests)
 
 add_executable(isValidSequence isValidSequence.cpp)
 target_link_libraries(isValidSequence unittests)
+
+add_executable(n-queens n-queens.cpp)
+target_link_libraries(n-queens unittests)
+
+add_executable(n-queens-ii n-queens-ii.cpp)
+target_link_libraries(n-queens-ii unittests)
+
+add_executable(rotate-list rotate-list.cpp)
+target_link_libraries(rotate-list unittests)
+
+add_executable(unique-paths unique-paths.cpp)
+target_link_libraries(unique-paths unittests)
+
+add_executable(unique-paths-ii unique-paths-ii.cpp)
+target_link_libraries(unique-paths-ii unittests)
+
+add_executable(text-justification text-justification.cpp)
+target_link_libraries(text-justification unittests)
+
+add_executable(simplify-path simplify-path.cpp)
+target_link_libraries(simplify-path unittests)
+
+add_executable(edit-distance edit-distance.cpp)
+target_link_libraries(edit-distance unittests)

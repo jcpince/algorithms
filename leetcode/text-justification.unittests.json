@@ -1,0 +1,71 @@
+{
+    "tests" :
+    [
+        {
+            "in"     : {
+                "words": ["This", "is", "an", "example", "of", "text", "justification."],
+                "maxWidth" : 16
+            },
+            "expected" : ["This    is    an","example  of text","justification.  "]
+        },
+        {
+            "in"     : {
+                "words": ["What","must","be","acknowledgment","shall","be"],
+                "maxWidth" : 16
+            },
+            "expected" : ["What   must   be","acknowledgment  ","shall be        "]
+        },
+        {
+            "in"     : {
+                "words": ["Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"],
+                "maxWidth" : 20
+            },
+            "expected" : ["Science  is  what we","understand      well","enough to explain to","a  computer.  Art is","everything  else  we","do                  "]
+        },
+        {
+            "in"     : {
+                "words": ["Science","what","we","understand"],
+                "maxWidth" : 12
+            },
+            "expected" : ["Science what","we          ","understand  "]
+        },
+        {
+            "in"     : {
+                "words": ["."],
+                "maxWidth" : 12
+            },
+            "expected" : [".           "]
+        }
+    ],
+    "invalid scenarios" :
+    [
+        {
+            "in"     : {
+                "words": ["Science","what","we","understand"],
+                "maxWidth" : 12
+            },
+            "expected" : []
+        },
+        {
+            "in"     : {
+                "words": ["Science"," what  ","we","understand"],
+                "maxWidth" : 12
+            },
+            "expected" : []
+        },
+        {
+            "in"     : {
+                "words": [""],
+                "maxWidth" : 12
+            },
+            "expected" : []
+        },
+        {
+            "in"     : {
+                "words": [],
+                "maxWidth" : 12
+            },
+            "expected" : []
+        }
+    ]
+}

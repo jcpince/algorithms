@@ -1,0 +1,72 @@
+{
+    "tests" :
+    [
+        {
+            "in"     : "/home",
+            "expected" : "/home"
+        },
+        {
+            "in"     : "/home/",
+            "expected" : "/home"
+        },
+        {
+            "in"     : "/home//jc",
+            "expected" : "/home/jc"
+        },
+        {
+            "in"     : "/home/jc../",
+            "expected" : "/home/jc.."
+        },
+        {
+            "in"     : "/home/../",
+            "expected" : "/"
+        },
+        {
+            "in"     : "/../../../../home/",
+            "expected" : "/home"
+        },
+        {
+            "in"     : "/home/jc/../../..",
+            "expected" : "/"
+        },
+        {
+            "in"     : "/home/jc/./../..",
+            "expected" : "/"
+        },
+        {
+            "in"     : "/home/jc/./toto",
+            "expected" : "/home/jc/toto"
+        },
+        {
+            "in"     : "/home/jc/./../../toto",
+            "expected" : "/toto"
+        },
+        {
+            "in"     : "/home/jc/./../jc/../toto",
+            "expected" : "/home/toto"
+        },
+        {
+            "in"     : "/home/jc/./../jc/../toto/.././",
+            "expected" : "/home"
+        },
+        {
+            "in"     : "/home/jc/../.../..",
+            "expected" : "/home"
+        },
+        {
+            "in"     : "/home/jc/.......",
+            "expected" : "/home/jc/......."
+        }
+    ],
+    "invalid scenarios" :
+    [
+        {
+            "in"     : "home/jc",
+            "expected" : ""
+        },
+        {
+            "in"     : "./home/jc",
+            "expected" : ""
+        }
+    ]
+}

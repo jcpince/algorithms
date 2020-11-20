@@ -1,0 +1,45 @@
+{
+    "tests" :
+    [
+        {
+            "in"     : 0,
+            "expected"  :0
+        },
+        {
+            "in"     : 1,
+            "expected"  : 1
+        },
+        {
+            "in"     : 2,
+            "expected"  : 0
+        },
+        {
+            "in"     : 3,
+            "expected"  : 0
+        },
+        {
+            "in"     : 4,
+            "expected"  : 2
+        },
+        {
+            "in"     : 5,
+            "expected"  : 10
+        },
+        {
+            "in"     : 6,
+            "expected"  : 4
+        },
+        {
+            "in"     : 7,
+            "expected"  : 40
+        },
+        {
+            "in"     : 8,
+            "expected"  : 92
+        },
+        {
+            "in"     : 13,
+            "expected"  : 73712
+        }
+    ]
+}

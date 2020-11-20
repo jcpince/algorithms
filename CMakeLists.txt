@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_BUILD_TYPE DEBUG)
 
-set(BUILD_FLAGS "-O3 -ggdb -fsanitize=address -pedantic -Wall -Wextra -Wno-vla -Wno-vla-extension")
+set(BUILD_FLAGS "-O0 -ggdb -fsanitize=address -pedantic -Wall -Wextra -Wno-vla -Wno-vla-extension")
 set(CMAKE_C_FLAGS ${BUILD_FLAGS})
 set(CMAKE_C_FLAGS_DEBUG ${BUILD_FLAGS})
 set(CMAKE_C_FLAGS_RELEASE ${BUILD_FLAGS})

@@ -1,0 +1,61 @@
+{
+    "tests" :
+    [
+        {
+            "in"        :
+            {
+                "word1"    : "horse",
+                "word2"    : "ros"
+            },
+            "expected"  : 3
+        },
+        {
+            "in"        :
+            {
+                "word1"    : "intention",
+                "word2"    : "execution"
+            },
+            "expected"  : 5
+        },
+        {
+            "in"        :
+            {
+                "word1"    : "rrsebm",
+                "word2"    : "kagzhryd"
+            },
+            "expected"  : 8
+        },
+        {
+            "in"        :
+            {
+                "word1"    : "rrsebmuvgnbymisc",
+                "word2"    : "kagzhrydaxv"
+            },
+            "expected"  : 15
+        },
+        {
+            "in"        :
+            {
+                "word1"    : "rrsebmuvgbdyxfdpromapqpqcfwikxynbymisc",
+                "word2"    : "kagzhrydaxvjjnzdioguystwkxwwjwmppxfejhdxixlvmfdbzijpqt"
+            },
+            "expected"  : 46
+        },
+        {
+            "in"        :
+            {
+                "word1"    : "rrsebmuvgbdyxfdproxjrtgunwxmapqpqcfwikxynbymisc",
+                "word2"    : "kagzhrydaxvjjnzdioguystwkxwwjwmppxfejhdwsllusvikprlccpmibexixlvmfdbzijpqt"
+            },
+            "expected"  : 61
+        },
+        {
+            "in"        :
+            {
+                "word1"    : "rrsebmuvgbdyxfdproxjrtgunwxmapqpqcfwikxynbymiscdykoyzqzywwykhgeipowaljogfdxlftlccytucvmgppppfadkaafvgwmnawcnileqfkyqzkeeknahxblfwiujjnocgtrczxjacjoyesujxphljemzwujksqcbeqtudznkfzfrtakljnrdvppyflklnykwzbvzqedhkgdmfyrlisxrknsgabuzpakrzymwrxmxnavpxpebrmpthpgplssjrlwumrozgplriyqfoggdzpqfgqezskvbpqgsetzalhaxacrcnyrjkrwwingpmownjrzvnhvdqqfqakqceezirmkqfytrxzpvsqalzwmkpinrdbqzcrlkzsliufvzirzclkyyvdftaqgodwfldaqonmwrgthjbsrncrwbcveywikbqprujntxodbbrisxrsersdtvtwajhrqwfqaxspftqwkbvmemughljvdccgqpsbmhmcpu",
+                "word2"    : "kagzhrydaxvjjnzdioguystwkxwwjwmppxfejhdwsllusvikprlccpmibexixlvmfdbzijpqbcpqfsavtvbcgyjyvfdbxgfjtnclyczjxfsolnmzmyxpejeyoaxbtpmdzwolkaddzzxrcgjxiiugoiidxodnusmwihvdxzgsgliwzzizfgnfkromwignhdpandpdmzooxrubqdekgssbtuftjybbabjdtijniqtikcrqaqsokgglrsynvwwqarygxpcuhabqugdanhpvjfryebblglanqqddatmffjmrikkvmpjyymhpfqtknursmynyqdstqqlhplguoknfkutzhlodxxpsnoillsrzutruxdhvxelcunpvxjdhjfkcooqevbwgzsdwvfadlwcumegvuputyjumyefjacjnwrhhaeiguqibwkslxspisxhrwzuunsmdbfsqawounbtllwqcamqtxfcawdjlyxtbqfqpiqetroocbvwt"
+            },
+            "expected"  : 443
+        }
+    ]
+}
