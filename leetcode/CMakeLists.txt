@@ -246,3 +246,12 @@ target_link_libraries(simplify-path unittests)
 
 add_executable(edit-distance edit-distance.cpp)
 target_link_libraries(edit-distance unittests)
+
+add_executable(combinations combinations.cpp)
+target_link_libraries(combinations unittests)
+
+add_executable(word-search word-search.cpp)
+target_link_libraries(word-search unittests)
+
+add_executable(scramble-string scramble-string.cpp)
+target_link_libraries(scramble-string unittests)

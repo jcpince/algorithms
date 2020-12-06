@@ -1,0 +1,61 @@
+{
+    "tests" :
+    [
+        {
+            "in"        :
+            {
+                "s1" : "griat",
+                "s2" : "rgeat"
+            },
+            "expected"  : false
+        },
+        {
+            "in"        :
+            {
+                "s1" : "abcd",
+                "s2" : "badc"
+            },
+            "expected"  : true
+        },
+        {
+            "in"        :
+            {
+                "s1" : "great",
+                "s2" : "rgeat"
+            },
+            "expected"  : true
+        },
+        {
+            "in"        :
+            {
+                "s1" : "abcde",
+                "s2" : "caebd"
+            },
+            "expected"  : false
+        },
+        {
+            "in"        :
+            {
+                "s1" : "a",
+                "s2" : "a"
+            },
+            "expected"  : true
+        },
+        {
+            "in"        :
+            {
+                "s1" : "a",
+                "s2" : "b"
+            },
+            "expected"  : false
+        },
+        {
+            "in"        :
+            {
+                "s1" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+                "s2" : "baaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "expected"  : true
+        }
+    ]
+}

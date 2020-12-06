@@ -1,0 +1,45 @@
+{
+    "tests" :
+    [
+        {
+            "in"        :
+            {
+                "board" : [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],
+                "word"  : "ABCCED"
+            },
+            "expected"  : true
+        },
+        {
+            "in"        :
+            {
+                "board" : [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],
+                "word"  : "SEE"
+            },
+            "expected"  : true
+        },
+        {
+            "in"        :
+            {
+                "board" : [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],
+                "word"  : "ABCB"
+            },
+            "expected"  : false
+        },
+        {
+            "in"        :
+            {
+                "board" : [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],
+                "word"  : "ABCESCEDA"
+            },
+            "expected"  : true
+        },
+        {
+            "in"        :
+            {
+                "board" : [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],
+                "word"  : "ABCESCEDAD"
+            },
+            "expected"  : false
+        }
+    ]
+}
