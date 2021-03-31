@@ -36,3 +36,4 @@ __pycache__
 *.app
 .tags
 build
+Cargo.lock

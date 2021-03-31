@@ -1,0 +1,10 @@
+[package]
+name = "rslib"
+version = "0.1.0"
+authors = ["Jean-Christophe Pince <jcpince@gmail.com>"]
+
+[lib]
+crate-type = ["staticlib"]
+path = "leetcode/distinct-subsequences.rs"
+
+[dependencies]

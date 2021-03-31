@@ -255,3 +255,6 @@ target_link_libraries(word-search unittests)
 
 add_executable(scramble-string scramble-string.cpp)
 target_link_libraries(scramble-string unittests)
+
+add_executable(distinct-subsequences-rs distinct-subsequences-rs.cpp)
+target_link_libraries(distinct-subsequences-rs rslib unittests dl pthread)

@@ -1,0 +1,93 @@
+{
+	"tests" :
+	[
+		{
+			"in"        :
+			{
+				"s"    : "baaab",
+				"t"    : "baab"
+			},
+			"expected"  : 3
+		},
+		{
+			"in"        :
+			{
+				"s"    : "rabbbit",
+				"t"    : "rabbis"
+			},
+			"expected"  : 0
+		},
+		{
+			"in"        :
+			{
+				"s"    : "rabbbit",
+				"t"    : "rabbit"
+			},
+			"expected"  : 3
+		},
+		{
+			"in"        :
+			{
+				"s"    : "rbbbt",
+				"t"    : "rbbt"
+			},
+			"expected"  : 3
+		},
+		{
+			"in"        :
+			{
+				"s"    : "rbbt",
+				"t"    : "rbt"
+			},
+			"expected"  : 2
+		},
+		{
+			"in"        :
+			{
+				"s"    : "babgbag",
+				"t"    : "bag"
+			},
+			"expected"  : 5
+		},
+		{
+			"in"        :
+			{
+				"s"    : "",
+				"t"    : ""
+			},
+			"expected"  : 1
+		},
+		{
+			"in"        :
+			{
+				"s"    : "",
+				"t"    : "rabbit"
+			},
+			"expected"  : 0
+		},
+		{
+			"in"        :
+			{
+				"s"    : "rabbit",
+				"t"    : ""
+			},
+			"expected"  : 1
+		},
+		{
+			"in"        :
+			{
+				"s"    : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+				"t"    : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+			},
+			"expected"  : 1000
+		},
+		{
+			"in"        :
+			{
+				"s"    : "babgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbaggababgbagga",
+				"t"    : "bag"
+			},
+			"expected"  : 4545000
+		}
+	]
+}
