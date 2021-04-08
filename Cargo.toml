@@ -5,6 +5,6 @@ authors = ["Jean-Christophe Pince <jcpince@gmail.com>"]
 
 [lib]
 crate-type = ["staticlib"]
-path = "leetcode/distinct-subsequences.rs"
+path = "leetcode/leetcode.rs"
 
 [dependencies]
