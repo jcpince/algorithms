@@ -1,0 +1,18 @@
+[package]
+name = "leetcode"
+version = "0.1.0"
+authors = ["Jean-Christophe Pince <jcpince@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib"]
+path = "rslib.rs"
+
+
+[[bin]]
+name = "word_ladder_ii"
+path = "word-ladder-ii.rs"
+
+[dependencies]
+algo_tools = { path = "../tools" }
+json = "*"

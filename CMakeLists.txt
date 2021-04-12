@@ -26,6 +26,8 @@ cargo_build(NAME rslib)
 include_directories(tools)
 include_directories(algos)
 
+link_directories(${CMAKE_BINARY_DIR}/x86_64-unknown-linux-gnu/debug)
+
 add_subdirectory(tools)
 add_subdirectory(leetcode)
 add_subdirectory(hackerrank)

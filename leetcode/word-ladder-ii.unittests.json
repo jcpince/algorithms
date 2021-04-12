@@ -1,0 +1,21 @@
+{
+	"tests" :
+	[
+		{
+			"in"        : {
+				"begin_word" : "hello",
+				"end_word" :   "world",
+				"dictionnary" : ["hollo", "wollo", "worlo", "world"]
+			},
+			"expected"  : [["hello", "hollo", "wollo", "worlo", "world"]]
+		},
+		{
+			"in"        : {
+				"begin_word" : "hello",
+				"end_word" :   "worlo",
+				"dictionnary" : ["hollo", "wollo", "worlo", "world"]
+			},
+			"expected"  : [["hello", "hollo", "wollo", "worlo"]]
+		}
+	]
+}

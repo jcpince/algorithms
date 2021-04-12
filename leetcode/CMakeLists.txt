@@ -257,7 +257,7 @@ add_executable(scramble-string scramble-string.cpp)
 target_link_libraries(scramble-string unittests)
 
 add_executable(distinct-subsequences-rs distinct-subsequences-rs.cpp)
-target_link_libraries(distinct-subsequences-rs rslib unittests dl pthread)
+target_link_libraries(distinct-subsequences-rs leetcode unittests dl pthread)
 
 add_executable(best-time-to-buy-and-sell-stock-iii-rs best-time-to-buy-and-sell-stock-iii-rs.cpp)
-target_link_libraries(best-time-to-buy-and-sell-stock-iii-rs rslib unittests dl pthread)
+target_link_libraries(best-time-to-buy-and-sell-stock-iii-rs leetcode unittests dl pthread)

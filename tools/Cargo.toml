@@ -1,0 +1,11 @@
+[package]
+name = "algo_tools"
+version = "0.0.1"
+authors = ["Jean-Christophe Pince <jcpince@gmail.com>"]
+
+[lib]
+path = "json-test.rs"
+
+[dependencies]
+json = "*"
+clap = "*"
