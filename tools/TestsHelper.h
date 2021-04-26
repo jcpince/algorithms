@@ -1,8 +1,13 @@
 #ifndef __TESTSHELPER__
 #define __TESTSHELPER__
 
+#include <bits/stdc++.h>
+#include <cstdint>
 #include <vector>
 #include <string>
+
+#include <TreeNode.h>
+#include <UnitTests.h>
 
 using namespace std;
 

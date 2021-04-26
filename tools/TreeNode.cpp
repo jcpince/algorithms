@@ -17,7 +17,7 @@ void vector2tree(vector<int> &v, struct TreeNode *tree) {
             vnodes.push_back(node->left);
             debug_print("node.val(%d) has a left child with value %d\n", node->val, node->left->val);
         } else { debug_print("node.val(%d) has no left child\n", node->val); }
-        if (v[idx++] != -1) {
+        if (idx < v.size() and v[idx++] != -1) {
             node->right = &tree[idx-1];
             node->right->val = v[idx-1];
             vnodes.push_back(node->right);

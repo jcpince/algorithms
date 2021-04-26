@@ -261,3 +261,10 @@ target_link_libraries(distinct-subsequences-rs leetcode unittests dl pthread)
 
 add_executable(best-time-to-buy-and-sell-stock-iii-rs best-time-to-buy-and-sell-stock-iii-rs.cpp)
 target_link_libraries(best-time-to-buy-and-sell-stock-iii-rs leetcode unittests dl pthread)
+
+add_problem(subsets-ii)
+add_problem(decode-ways)
+add_problem(binary-tree-inorder-traversal)
+add_problem(validate-binary-search-tree)
+add_problem(recover-binary-search-tree)
+add_problem(construct-binary-tree-from-preorder-and-inorder-traversal)

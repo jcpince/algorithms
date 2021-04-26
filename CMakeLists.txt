@@ -11,6 +11,7 @@ set(CMAKE_C_FLAGS_RELEASE ${BUILD_FLAGS})
 set(CMAKE_CXX_FLAGS ${BUILD_FLAGS})
 set(CMAKE_CXX_FLAGS_DEBUG ${BUILD_FLAGS})
 set(CMAKE_CXX_FLAGS_RELEASE ${BUILD_FLAGS})
+set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -22,6 +23,13 @@ enable_language(Rust)
 include(CMakeCargo)
 
 cargo_build(NAME rslib)
+
+macro(add_problem problem_name)
+    message("Adding problem: ${problem_name}")
+    add_executable(${problem_name} ${problem_name}.cpp main.cpp)
+    target_link_libraries(${problem_name} unittests)
+    #set_property(TARGET ${problem_name} PROPERTY CXX_STANDARD 20)
+endmacro()
 
 include_directories(tools)
 include_directories(algos)
