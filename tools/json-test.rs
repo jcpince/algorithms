@@ -4,6 +4,8 @@ extern crate json;
 use self::clap::{Arg, App};
 use std::fs;
 
+pub mod treenode;
+
 pub fn load_json_tests() -> (json::JsonValue, i32) {
     let matches = App::new("json test loader")
     .version("0.0.1")
