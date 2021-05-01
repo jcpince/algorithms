@@ -10,8 +10,28 @@ path = "rslib.rs"
 
 
 [[bin]]
-name = "word_ladder_ii"
+name = "word-ladder-ii"
 path = "word-ladder-ii.rs"
+
+[[bin]]
+name = "word-ladder"
+path = "word-ladder.rs"
+
+[[bin]]
+name = "longest-consecutive-sequence"
+path = "longest-consecutive-sequence.rs"
+
+[[bin]]
+name = "sum-root-to-leaf-numbers"
+path = "sum-root-to-leaf-numbers.rs"
+
+[[bin]]
+name = "surrounded-regions"
+path = "surrounded-regions.rs"
+
+[[bin]]
+name = "palindrome-partitioning"
+path = "palindrome-partitioning.rs"
 
 [dependencies]
 algo_tools = { path = "../tools" }
