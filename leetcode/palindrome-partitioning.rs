@@ -6,22 +6,15 @@ Given a string s, partition s such that every substring of the partition is a pa
 
 A palindrome string is a string that reads the same backward as forward.
 
-
-
 Example 1:
-
 Input: s = "aab"
 Output: [["a","a","b"],["aa","b"]]
 
 Example 2:
-
 Input: s = "a"
 Output: [["a"]]
 
-
-
 Constraints:
-
 	1 <= s.length <= 16
 	s contains only lowercase English letters.
 */
@@ -32,28 +25,44 @@ use algo_tools::load_json_tests;
 struct Solution;
 
 impl Solution {
-	fn combine_all_palindromes(all_pals : &Vec<Vec<&str>>, idx : usize, slen : usize,
-				res: &mut Vec<Vec<String>>) {
+	fn comb_rec(all_pals : &[Vec<&str>], slen : usize, base : &mut Vec<Vec<String>>) {
+
+		assert!(base.len() == 1);
+		if all_pals[0].len() == 1 {
+			base[0].push(all_pals[0][0].to_string());
+			let plen = all_pals[0][0].len();
+			if plen < slen {
+				Self::comb_rec(&all_pals[plen..], slen - plen, base);
+			}
+		} else {
+			for pal in all_pals[0].iter() {
+				let mut new_base = vec!(base[0].clone(); 1);
+				new_base[0].push(pal.to_string());
+				if pal.len() < slen {
+					Self::comb_rec(&all_pals[pal.len()..], slen - pal.len(), &mut new_base);
+				}
+				base.append(&mut new_base);
+			}
+			base.remove(0);
+		}
+	}
+	fn combine_all_palindromes(all_pals : &Vec<Vec<&str>>, slen : usize) -> Vec<Vec<String>> {
 
 		// pals are the palindromes starting at index idx, they need to be combined with all the
 		// palindromes further in the string
-
-		for pal in all_pals[idx].iter() {
-			if pal.len() + idx < slen {
-				println!("Combining pal {} at index {}/{} with {:?}", pal, idx, slen,
-							&all_pals[pal.len() + idx..]);
-				for (index, pals) in all_pals.iter().skip(pal.len() + idx).enumerate() {
-					if pals.len() > 0 {
-						//println!("calling combine_all_palindromes from index {}", idx+index+1);
-						Self::combine_all_palindromes(&all_pals, idx+index+1, slen, res);
-					}
-				}
+		let mut res: Vec<Vec<String>> = Vec::new();
+		for pal in all_pals[0].iter() {
+			//println!("pal: {:?}", pal);
+			let mut subres = vec!(vec!(String::from(*pal); 1); 1);
+			if pal.len() < slen {
+				Self::comb_rec(&all_pals[pal.len()..], slen - pal.len(), &mut subres);
 			}
+			res.append(&mut subres);
 		}
-		println!("Combining at index {} done", idx);
+		res
 	}
 
-	fn find_all_palindromes(s: &String, res: &mut Vec<Vec<String>>) {
+	fn find_all_palindromes(s: &String)  -> Vec<Vec<String>> {
 
 		// searches the string for all palindromes
 		let mut all_pals : Vec<Vec<&str>> = Vec::new();
@@ -83,11 +92,11 @@ impl Solution {
 			}
 		}
 
-		println!("all_palindromes {:?}\n\n", all_pals);
-		Self::combine_all_palindromes(&all_pals, 0, s.len(), res);
+		//println!("all_palindromes {:?}\n\n", all_pals);
+		Self::combine_all_palindromes(&all_pals, s.len())
 	}
 
-	/*fn print_all_palindromes(s: &String, res: &mut Vec<Vec<String>>) {
+	fn _print_all_palindromes(s: &String) {
 		// searches the string for all palindromes
 		println!("Check1 s[0] = {} : palindrome!", s.chars().nth(0).unwrap());
 		for index in 1..s.len() {
@@ -111,16 +120,27 @@ impl Solution {
 				off += 1
 			}
 		}
-	}*/
+	}
 
 	pub fn partition(s: String) -> Vec<Vec<String>> {
-		let mut res = Vec::new();
-		//Self::print_all_palindromes(&s, &mut res);
-		Self::find_all_palindromes(&s, &mut res);
-		res
+		//Self::_print_all_palindromes(&s);
+		Self::find_all_palindromes(&s)
 	}
 }
 
+fn compare_unordered(res : &Vec<Vec<String>>, exp : &Vec<Vec<String>>) -> bool {
+	if res.len() != exp.len() { return false; }
+	let mut comp = vec!(0; res.len());
+	for s in res.iter() {
+		for (idx, e) in exp.iter().enumerate() {
+			if comp[idx] == 0 && e == s {
+				comp[idx] = 1;
+				break;
+			}
+		}
+	}
+	comp.iter().sum::<usize>() == res.len()
+}
 
 fn run_test_case(test_case: &json::JsonValue) -> i32 {
 
@@ -138,7 +158,7 @@ fn run_test_case(test_case: &json::JsonValue) -> i32 {
 
 	let result = Solution::partition(s.to_string());
 
-	if result == expected {
+	if compare_unordered(&result, &expected) {
 		return 0;
 	}
 
