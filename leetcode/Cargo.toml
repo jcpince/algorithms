@@ -33,6 +33,18 @@ path = "surrounded-regions.rs"
 name = "palindrome-partitioning"
 path = "palindrome-partitioning.rs"
 
+[[bin]]
+name = "palindrome-partitioning-ii"
+path = "palindrome-partitioning-ii.rs"
+
+[[bin]]
+name = "candy"
+path = "candy.rs"
+
+[[bin]]
+name = "word-break"
+path = "word-break.rs"
+
 [dependencies]
 algo_tools = { path = "../tools" }
 json = "*"

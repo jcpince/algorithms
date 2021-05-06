@@ -1,0 +1,61 @@
+{
+        "tests" :
+        [
+                {
+                        "in"        : {
+                                "s" : "goalspecial",
+                                "word_dict" : ["go","goal","goals","special"]
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        : {
+                                "s" : "leetcode",
+                                "word_dict" : ["leet","code"]
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        : {
+                                "s" : "applepenapple",
+                                "word_dict" : ["apple","pen"]
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        : {
+                                "s" : "catsandog",
+                                "word_dict" : ["cats","dog","sand","and","cat"]
+                        },
+                        "expected"  : false
+                },
+                {
+                        "in"        : {
+                                "s" : "aaaaaaa",
+                                "word_dict" : ["aaaa","aaa"]
+                        },
+                        "expected"  : true
+                },
+                {
+                        "in"        : {
+                                "s" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+                                "word_dict" : ["a", "aa"]
+                        },
+                        "expected"  : false
+                },
+                {
+                        "in"        : {
+                                "s" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+                                "word_dict" : ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]
+                        },
+                        "expected"  : false
+                },
+                {
+                        "in"        : {
+                                "s" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                                "word_dict" : ["aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa","ba"]
+                        },
+                        "expected"  : false
+                }
+        ]
+}

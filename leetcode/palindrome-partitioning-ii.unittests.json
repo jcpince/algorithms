@@ -1,0 +1,54 @@
+{
+	"tests" :
+	[
+		{
+			"in"        : "aab",
+			"expected"  : 1
+		},
+		{
+			"in"        : "aabb",
+			"expected"  : 1
+		},
+		{
+			"in"        : "aabbaa",
+			"expected"  : 0
+		},
+		{
+			"in"        : "seeyey",
+			"expected"  : 2
+		},
+		{
+			"in"        : "ccaacabacb",
+			"expected"  : 3
+		},
+		{
+			"in"        : "a",
+			"expected"  : 0
+		},
+		{
+			"in"        : "leet",
+			"expected"  : 2
+		},
+		{
+			"in"        : "aabaabbabbccacc",
+			"expected"  : 2
+		},
+		{
+			"in"        : "aabaabbabbccaccaabaabbabbcc",
+			"expected"  : 5
+		},
+		{
+			"in"        : "aabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccacc",
+			"expected"  : 17
+		},
+		{
+			"in"        : "aabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccaccaabaabbabbccacc",
+			"expected"  : 122
+		},
+		{
+			"in"        :
+			"apjesgpsxoeiokmqmfgvjslcjukbqxpsobyhjpbgdfruqdkeiszrlmtwgfxyfostpqczidfljwfbbrflkgdvtytbgqalguewnhvvmcgxboycffopmtmhtfizxkmeftcucxpobxmelmjtuzigsxnncxpaibgpuijwhankxbplpyejxmrrjgeoevqozwdtgospohznkoyzocjlracchjqnggbfeebmuvbicbvmpuleywrpzwsihivnrwtxcukwplgtobhgxukwrdlszfaiqxwjvrgxnsveedxseeyeykarqnjrtlaliyudpacctzizcftjlunlgnfwcqqxcqikocqffsjyurzwysfjmswvhbrmshjuzsgpwyubtfbnwajuvrfhlccvfwhxfqthkcwhatktymgxostjlztwdxritygbrbibdgkezvzajizxasjnrcjwzdfvdnwwqeyumkamhzoqhnqjfzwzbixclcxqrtniznemxeahfozp",
+			"expected"  : 452
+		}
+	]
+}
