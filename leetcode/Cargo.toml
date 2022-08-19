@@ -45,6 +45,22 @@ path = "candy.rs"
 name = "word-break"
 path = "word-break.rs"
 
+[[bin]]
+name = "max-points-on-a-line"
+path = "max-points-on-a-line.rs"
+
+[[bin]]
+name = "evaluate-reverse-polish-notation"
+path = "evaluate-reverse-polish-notation.rs"
+
+[[bin]]
+name = "reverse-words-in-a-string"
+path = "reverse-words-in-a-string.rs"
+
+[[bin]]
+name = "maximum-product-subarray"
+path = "maximum-product-subarray.rs"
+
 [dependencies]
 algo_tools = { path = "../tools" }
 json = "*"

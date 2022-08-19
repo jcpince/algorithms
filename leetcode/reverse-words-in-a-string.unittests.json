@@ -1,0 +1,17 @@
+{
+	"tests" :
+	[
+			{
+					"in"        : "the sky is blue",
+					"expected"  : "blue is sky the"
+			},
+			{
+					"in"        : "  hello world  ",
+					"expected"  : "world hello"
+			},
+			{
+					"in"        : "a good   example",
+					"expected"  : "example good a"
+			}
+	]
+}
