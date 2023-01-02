@@ -61,6 +61,26 @@ path = "reverse-words-in-a-string.rs"
 name = "maximum-product-subarray"
 path = "maximum-product-subarray.rs"
 
+[[bin]]
+name = "find-minimum-in-rotated-sorted-array"
+path = "find-minimum-in-rotated-sorted-array.rs"
+
+[[bin]]
+name = "find-minimum-in-rotated-sorted-array-ii"
+path = "find-minimum-in-rotated-sorted-array-ii.rs"
+
+[[bin]]
+name = "find-peak-element"
+path = "find-peak-element.rs"
+
+[[bin]]
+name = "maximum-gap"
+path = "maximum-gap.rs"
+
+[[bin]]
+name = "house-robber"
+path = "house-robber.rs"
+
 [dependencies]
 algo_tools = { path = "../tools" }
 json = "*"
